@@ -11,9 +11,10 @@ import { Dialog } from "@material/mwc-dialog";
 import { TWalletConnectParams } from './interface'
 import { INetworkParams } from './interface';
 import { nothing } from 'lit-html';
+import { STYLES } from "./styles";
+
 const injected = 'web 3.0 injected';
 const PROVIDERS: string[] = ['privateKey', 'keystore', 'walletconnect', injected];
-
 const LOCAL_STORAGE_PROVIDER_NAME = "eth_connect_provider";
 const LOCAL_STORAGE_PRIVATEKEY_NAME = "eth_connect_privatekey";
 const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
@@ -48,95 +49,7 @@ const walletconnect = async (params: TWalletConnectParams): Promise<any> => {
 
 @customElement('eth-wallet-connect')
 export class EthWalletConnect extends LitElement{    
-    static styles = [css `
-        :host{
-            font-family: var(--body-font, Helvetica, Arial, sans-serif);
-            display: block;
-        }
-        .flex-row{
-            display: flex;
-        }
-        .flex-row-center{
-            display: flex;
-            align-items: center;
-        }
-        .header{
-            margin: 0;
-            font-size: 18px;
-        }        
-        .wallet-icon{
-            border-radius: 20px;
-            width: 45px;
-            height: 45px;
-            margin-right: 10px;
-        }
-        .wallet-icon svg{
-            width: 100%;
-            height: 100%;
-        }
-
-        .attention {
-            margin-top: 0;
-            color: #ba0000;
-            font-size: 1.1.rem;
-        }
-        .wallet{
-            display: flex;
-            align-items: center;
-            color: var(--app-text-color);
-            font-size: 12px;
-            border-radius: 20px;
-            text-align: center;
-            padding: 0 5px;
-        }
-        .wallte-short{
-            display: flex;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .error {
-            margin-top: 10px;
-            padding: 5px 10px;
-            font-size: 14px;
-            background-color: #d70404;
-            text-align: center;
-            color: #fff;
-            word-break: break-all;
-        }
-
-        .provider-card-wrapper {
-            flex: 1 0 25%;
-            min-width: 120px;
-            background: none;
-            outline: none;
-            border: none;
-            padding: 2px;
-        }
-
-        .provider-card {
-            cursor: pointer;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            height: 120px;
-            border-radius: 2px;
-            border: 1px solid hsl(340, 20%, 90%);
-        }
-
-        .provider-card:hover {
-            border: 1px solid hsl(340, 90%, 70%);
-        }
-        .provider-card .title{
-            margin-top: 15px;
-        }
-
-        .wrapper {
-            display: flex;
-            flex-wrap: wrap;
-        }`]
+    static styles = STYLES;
     @property({type: Object, attribute: false}) connectionConfig: INetworkParams;
     @internalProperty() modalContentState: string = 'providers';
     @internalProperty() errorContent: string = '';
@@ -312,7 +225,7 @@ export class EthWalletConnect extends LitElement{
 
     /** Templates */
 
-    private privateKeyContent(){
+    private templatePrivateKey(){
         return html`<h5 class="attention">${translate.get("privateKeyAttention")}</h5>
         <mwc-textfield id = "privatekey-input" 
                        required
@@ -322,7 +235,7 @@ export class EthWalletConnect extends LitElement{
                     slot = "primaryAction" 
                     raised >${translate.get("button_connect")}</mwc-button>`;
     }
-    private keystoreContent(){
+    private templateKeystore(){
         return html`<h5 class = "attention">${translate.get("privateKeyAttention")}</h5>
                 <input id = "keystore-file"
                        type = "file"
@@ -345,7 +258,7 @@ export class EthWalletConnect extends LitElement{
                         slot = "primaryAction"
                         raised >${translate.get("button_connect")}</mwc-button>`;
     }
-    private providerSelectContent(){
+    private templateSelectProvider(){
         return html`<div class = "wrapper">${PROVIDERS.map(it =>
             html`<button type="submit"
                                  @click="${() => this._onProviderSelect(it)}"
@@ -357,19 +270,19 @@ export class EthWalletConnect extends LitElement{
                         </button>`)}
                     </div>`;
     }
-    private rennderDialogProviderContent(){
+    private templateProviderContent(){
         if(this.modalContentState === 'providers'){
-            return this.providerSelectContent();
+            return this.templateSelectProvider();
         }
         else if(this.modalContentState === 'privateKey'){
-            return this.privateKeyContent();
+            return this.templatePrivateKey();
         }
         else if(this.modalContentState === 'keystore'){
-            return this.keystoreContent();
+            return this.templateKeystore();
         }
     }
-    private rennderDialogProvider(){
-        return html`${this.rennderDialogProviderContent()}
+    private templateDialogProvider(){
+        return html`${this.templateProviderContent()}
                 ${
                     this.modalContentState !== "providers" 
                     ? html`<mwc-button @click="${this._onBack}"
@@ -420,13 +333,12 @@ export class EthWalletConnect extends LitElement{
             </div>
             <mwc-dialog heading = "${this.modalHeader}" 
                         @closed = "${this._onClose}">                                                        
-                ${this.rennderDialogProvider()}
+                ${this.templateDialogProvider()}
                 <mwc-button dialogAction = "close" 
                             slot = "secondaryAction">${translate.get('button_close')}</mwc-button>
             </mwc-dialog>
         `;
     }
-
 
 }
 
