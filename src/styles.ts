@@ -88,7 +88,7 @@ export const STYLES = css`
         flex-wrap: wrap;
     }
     button.primary{
-        color: var(--mdc-theme-primary, hsl(110, 0.9, 0.5));
+        color: var(--mdc-theme-primary, hsl(210, 95%, 50%));
     }
     button{
         font-family: var(--body-font, Arial, sans-serif);

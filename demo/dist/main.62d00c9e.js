@@ -44424,7 +44424,23 @@ const storage = {
 };
 const translate = new _simpleTranslations.Translate(storage);
 exports.translate = translate;
-},{"simple-translations":"../node_modules/simple-translations/src/main.ts"}],"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"simple-translations":"../node_modules/simple-translations/src/main.ts"}],"../src/styles.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.STYLES = void 0;
+
+var _litElement = require("lit-element");
+
+var _templateObject;
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+const STYLES = (0, _litElement.css)(_templateObject || (_templateObject = _taggedTemplateLiteral(["\n    :host{\n        font-family: var(--body-font, Helvetica, Arial, sans-serif);\n        display: block;\n    }\n    .flex-row{\n        display: flex;\n    }\n    .flex-row-center{\n        display: flex;\n        align-items: center;\n    }\n    .header{\n        margin: 0;\n        font-size: 18px;\n    }        \n    .wallet-icon{\n        border-radius: 20px;\n        width: 45px;\n        height: 45px;\n        margin-right: 10px;\n    }\n    .wallet-icon svg{\n        width: 100%;\n        height: 100%;\n    }\n\n    .attention {\n        margin-top: 0;\n        color: #ba0000;\n        font-size: 1.1.rem;\n    }\n    .wallet{\n        display: flex;\n        align-items: center;\n        color: var(--app-text-color);\n        font-size: 12px;\n        border-radius: 20px;\n        text-align: center;\n        padding: 0 5px;\n    }\n    .wallte-short{\n        display: flex;\n        justify-content: center;\n        width: 100%;\n    }\n\n    .error {\n        margin-top: 10px;\n        padding: 5px 10px;\n        font-size: 14px;\n        background-color: #d70404;\n        text-align: center;\n        color: #fff;\n        word-break: break-all;\n    }\n\n    .provider-card-wrapper {\n        flex: 1 0 25%;\n        min-width: 120px;\n        background: none;\n        outline: none;\n        border: none;\n        padding: 2px;\n    }\n\n    .provider-card {\n        cursor: pointer;\n        padding: 20px;\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n        align-items: center;\n        height: 120px;\n        border-radius: 2px;\n        border: 1px solid hsl(340, 20%, 90%);\n    }\n\n    .provider-card:hover {\n        border: 1px solid hsl(340, 90%, 70%);\n    }\n    .provider-card .title{\n        margin-top: 15px;\n    }\n    .wrapper {\n        display: flex;\n        flex-wrap: wrap;\n    }\n    button.primary{\n        color: var(--mdc-theme-primary, hsl(210, 95%, 50%));\n    }\n    button{\n        font-family: var(--body-font, Arial, sans-serif);\n        outline: none;\n        border: none;\n        background: transparent;\n        font-weight: var(--font-button-weight, 600);\n        cursor: pointer;\n    }"])));
+exports.STYLES = STYLES;
+},{"lit-element":"../node_modules/lit-element/lit-element.js"}],"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -44579,6 +44595,8 @@ var _translations = require("./translations");
 
 var _litHtml = require("lit-html");
 
+var _styles = require("./styles");
+
 var _interface = require("./interface");
 
 Object.keys(_interface).forEach(function (key) {
@@ -44593,7 +44611,7 @@ Object.keys(_interface).forEach(function (key) {
   });
 });
 
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44832,30 +44850,30 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   /** Templates */
 
 
-  privateKeyContent() {
+  templatePrivateKey() {
     return (0, _litElement.html)(_templateObject || (_templateObject = _taggedTemplateLiteral(["<h5 class=\"attention\">", "</h5>\n        <mwc-textfield id = \"privatekey-input\" \n                       required\n                       label=\"", "\">\n        </mwc-textfield>\n        <mwc-button @click = \"", "\" \n                    slot = \"primaryAction\" \n                    raised >", "</mwc-button>"])), _translations.translate.get("privateKeyAttention"), _translations.translate.get("privateKey"), this._onconnectPrivateKey, _translations.translate.get("button_connect"));
   }
 
-  keystoreContent() {
+  templateKeystore() {
     return (0, _litElement.html)(_templateObject2 || (_templateObject2 = _taggedTemplateLiteral(["<h5 class = \"attention\">", "</h5>\n                <input id = \"keystore-file\"\n                       type = \"file\"\n                       @change = \"", "\"\n                       name = \"keystore\"\n                       hidden>\n                <div style=\"display: flex; align-items: center; justify-content: space-between\">\n                    <mwc-button @click = \"", "\"\n                                raised\n                                label = \"", "\"></mwc-button>\n                    <mwc-textfield required\n                                   password\n                                   id = \"keystore-password\"\n                                   label = \"", "\"></mwc-textfield>\n                </div>\n                <div>\n                    <small class = \"file-chosen\" style=\"word-break: break-all;\"></small>\n                </div>\n            <mwc-button @click = \"", "\"\n                        slot = \"primaryAction\"\n                        raised >", "</mwc-button>"])), _translations.translate.get("privateKeyAttention"), this._onFileChange, () => this.keystoreFile.click(), _translations.translate.get("choseFile"), _translations.translate.get("password"), this.connectKeyStore, _translations.translate.get("button_connect"));
   }
 
-  providerSelectContent() {
+  templateSelectProvider() {
     return (0, _litElement.html)(_templateObject3 || (_templateObject3 = _taggedTemplateLiteral(["<div class = \"wrapper\">", "\n                    </div>"])), PROVIDERS.map(it => (0, _litElement.html)(_templateObject4 || (_templateObject4 = _taggedTemplateLiteral(["<button type=\"submit\"\n                                 @click=\"", "\"\n                                 class=\"provider-card-wrapper\">\n                            <div class=\"provider-card\">\n                                ", "\n                                <div class=\"title\">", "</div>\n                            </div>\n                        </button>"])), () => this._onProviderSelect(it), (0, _unsafeSvg.unsafeSVG)(_icons.SVG_IMAGES[it]), it[0].toUpperCase() + it.slice(1))));
   }
 
-  rennderDialogProviderContent() {
+  templateProviderContent() {
     if (this.modalContentState === 'providers') {
-      return this.providerSelectContent();
+      return this.templateSelectProvider();
     } else if (this.modalContentState === 'privateKey') {
-      return this.privateKeyContent();
+      return this.templatePrivateKey();
     } else if (this.modalContentState === 'keystore') {
-      return this.keystoreContent();
+      return this.templateKeystore();
     }
   }
 
-  rennderDialogProvider() {
-    return (0, _litElement.html)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["", "\n                ", "\n                ", ""])), this.rennderDialogProviderContent(), this.modalContentState !== "providers" ? (0, _litElement.html)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["<mwc-button @click=\"", "\"\n                                       slot=\"secondaryAction\">", "</mwc-button>"])), this._onBack, _translations.translate.get('button_back')) : "", this.errorContent ? (0, _litElement.html)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["<div class = \"error\">", "</div>"])), this.errorContent) : "");
+  templateDialogProvider() {
+    return (0, _litElement.html)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["", "\n                ", "\n                ", ""])), this.templateProviderContent(), this.modalContentState !== "providers" ? (0, _litElement.html)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["<mwc-button @click=\"", "\"\n                                       slot=\"secondaryAction\">", "</mwc-button>"])), this._onBack, _translations.translate.get('button_back')) : "", this.errorContent ? (0, _litElement.html)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["<div class = \"error\">", "</div>"])), this.errorContent) : "");
   }
 
   templateConnectBtn() {
@@ -44875,12 +44893,12 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["        \n            <div class = \"flex-row-center\">\n                ", "\n                <div>\n                    <h4 class = \"header\">", "</h4>\n                    ", "\n                </div>\n            </div>\n            <slot></slot>\n            <div class = \"flex-row-center\"\n                 style = \"margin-top: 20px;\">\n            ", "\n            </div>\n            <mwc-dialog heading = \"", "\" \n                        @closed = \"", "\">                                                        \n                ", "\n                <mwc-button dialogAction = \"close\" \n                            slot = \"secondaryAction\">", "</mwc-button>\n            </mwc-dialog>\n        "])), this.templateWalletIcon(), _translations.translate.get("wallet"), this.shortWallet, this.wallet ? this.templateDisconnectBtn() : this.templateConnectBtn(), this.modalHeader, this._onClose, this.rennderDialogProvider(), _translations.translate.get('button_close'));
+    return (0, _litElement.html)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["        \n            <div class = \"flex-row-center\">\n                ", "\n                <div>\n                    <h4 class = \"header\">", "</h4>\n                    ", "\n                </div>\n            </div>\n            <slot></slot>\n            <div class = \"flex-row-center\"\n                 style = \"margin-top: 20px;\">\n            ", "\n            </div>\n            <mwc-dialog heading = \"", "\" \n                        @closed = \"", "\">                                                        \n                ", "\n                <mwc-button dialogAction = \"close\" \n                            slot = \"secondaryAction\">", "</mwc-button>\n            </mwc-dialog>\n        "])), this.templateWalletIcon(), _translations.translate.get("wallet"), this.shortWallet, this.wallet ? this.templateDisconnectBtn() : this.templateConnectBtn(), this.modalHeader, this._onClose, this.templateDialogProvider(), _translations.translate.get('button_close'));
   }
 
 };
 exports.EthWalletConnect = EthWalletConnect;
-EthWalletConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n        :host{\n            font-family: var(--body-font, Helvetica, Arial, sans-serif);\n            display: block;\n        }\n        .flex-row{\n            display: flex;\n        }\n        .flex-row-center{\n            display: flex;\n            align-items: center;\n        }\n        .header{\n            margin: 0;\n            font-size: 18px;\n        }        \n        .wallet-icon{\n            border-radius: 20px;\n            width: 45px;\n            height: 45px;\n            margin-right: 10px;\n        }\n        .wallet-icon svg{\n            width: 100%;\n            height: 100%;\n        }\n\n        .attention {\n            margin-top: 0;\n            color: #ba0000;\n            font-size: 1.1.rem;\n        }\n        .wallet{\n            display: flex;\n            align-items: center;\n            color: var(--app-text-color);\n            font-size: 12px;\n            border-radius: 20px;\n            text-align: center;\n            padding: 0 5px;\n        }\n        .wallte-short{\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        .error {\n            margin-top: 10px;\n            padding: 5px 10px;\n            font-size: 14px;\n            background-color: #d70404;\n            text-align: center;\n            color: #fff;\n            word-break: break-all;\n        }\n\n        .provider-card-wrapper {\n            flex: 1 0 25%;\n            min-width: 120px;\n            background: none;\n            outline: none;\n            border: none;\n            padding: 2px;\n        }\n\n        .provider-card {\n            cursor: pointer;\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: space-between;\n            align-items: center;\n            height: 120px;\n            border-radius: 2px;\n            border: 1px solid hsl(340, 20%, 90%);\n        }\n\n        .provider-card:hover {\n            border: 1px solid hsl(340, 90%, 70%);\n        }\n        .provider-card .title{\n            margin-top: 15px;\n        }\n\n        .wrapper {\n            display: flex;\n            flex-wrap: wrap;\n        }"])))];
+EthWalletConnect.styles = _styles.STYLES;
 (0, _tslib.__decorate)([(0, _litElement.property)({
   type: Object,
   attribute: false
@@ -44895,7 +44913,7 @@ EthWalletConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateO
 (0, _tslib.__decorate)([(0, _litElement.query)('#keystore-password')], EthWalletConnect.prototype, "keystorePassword", void 0);
 (0, _tslib.__decorate)([(0, _litElement.query)('#privatekey-input')], EthWalletConnect.prototype, "privateKeyInput", void 0);
 exports.EthWalletConnect = EthWalletConnect = (0, _tslib.__decorate)([(0, _litElement.customElement)('eth-wallet-connect')], EthWalletConnect);
-},{"tslib":"../node_modules/tslib/tslib.es6.js","@material/mwc-button":"../node_modules/@material/mwc-button/mwc-button.js","@material/mwc-dialog":"../node_modules/@material/mwc-dialog/mwc-dialog.js","@material/mwc-textfield":"../node_modules/@material/mwc-textfield/mwc-textfield.js","ethers":"../node_modules/ethers/lib.esm/index.js","./icons":"../src/icons.ts","@metamask/detect-provider":"../node_modules/@metamask/detect-provider/dist/index.js","lit-element":"../node_modules/lit-element/lit-element.js","lit-html/directives/unsafe-svg":"../node_modules/lit-html/directives/unsafe-svg.js","./translations":"../src/translations.ts","lit-html":"../node_modules/lit-html/lit-html.js","_bundle_loader":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js","@walletconnect/web3-provider":[["cjs.23f241cb.js","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"cjs.23f241cb.js.map","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"./interface":"../src/interface.ts"}],"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"tslib":"../node_modules/tslib/tslib.es6.js","@material/mwc-button":"../node_modules/@material/mwc-button/mwc-button.js","@material/mwc-dialog":"../node_modules/@material/mwc-dialog/mwc-dialog.js","@material/mwc-textfield":"../node_modules/@material/mwc-textfield/mwc-textfield.js","ethers":"../node_modules/ethers/lib.esm/index.js","./icons":"../src/icons.ts","@metamask/detect-provider":"../node_modules/@metamask/detect-provider/dist/index.js","lit-element":"../node_modules/lit-element/lit-element.js","lit-html/directives/unsafe-svg":"../node_modules/lit-html/directives/unsafe-svg.js","./translations":"../src/translations.ts","lit-html":"../node_modules/lit-html/lit-html.js","./styles":"../src/styles.ts","_bundle_loader":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js","@walletconnect/web3-provider":[["cjs.23f241cb.js","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"cjs.23f241cb.js.map","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"./interface":"../src/interface.ts"}],"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -44923,7 +44941,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61999" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49698" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
