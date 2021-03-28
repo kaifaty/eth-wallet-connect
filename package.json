@@ -1,8 +1,8 @@
 {
   "name": "eth-wallet-connect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
+  "main": "src/main.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel demo/index.html -d demo/dist "
