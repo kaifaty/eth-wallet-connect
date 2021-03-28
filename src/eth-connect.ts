@@ -3,9 +3,8 @@ import "@material/mwc-dialog";
 import "@material/mwc-textfield";
 import { ethers, Signer } from 'ethers'
 import { SVG_IMAGES } from "./icons";
-import { observeLitElement } from 'lit-store';
 import detectEthereumProvider from '@metamask/detect-provider'
-import {LitElement, html, css, property, customElement, query} from "lit-element";
+import {LitElement, html, css, property, customElement, query, internalProperty} from "lit-element";
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg';
 import { translate } from "./translations"
 import { Dialog } from "@material/mwc-dialog";
@@ -39,7 +38,7 @@ const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
  */
 
 @customElement('eth-connect')
-export class EthConnect extends observeLitElement(LitElement){    
+export class EthConnect extends LitElement{    
     static styles = [css `
         :host{
             font-family: var(--body-font, Helvetica, Arial, sans-serif);
@@ -122,12 +121,12 @@ export class EthConnect extends observeLitElement(LitElement){
             display: flex;
             flex-wrap: wrap;
         }`]
-    @property({type: String, attribute: false}) modalContentState: string = 'providers';
-    @property({type: String, attribute: false}) errorContent: string = ""
-    @property({type: String, attribute: false}) modalHeader: string = ""
-    @property({type: String, attribute: false}) provider: string = '';
-    @property({type: String, attribute: false}) wallet: string = '';
     @property({type: Object, attribute: false}) connectionConfig: INetworkParams;
+    @internalProperty() modalContentState: string = '';
+    @internalProperty() errorContent: string = '';
+    @internalProperty() modalHeader: string = '';
+    @internalProperty() wallet: string = '';
+    @internalProperty() provider: string = '';
     static get properties(){
         return {
             lang: {type: String}
