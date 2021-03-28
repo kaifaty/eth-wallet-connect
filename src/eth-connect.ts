@@ -18,6 +18,17 @@ const LOCAL_STORAGE_PROVIDER_NAME = "eth_connect_provider";
 const LOCAL_STORAGE_PRIVATEKEY_NAME = "eth_connect_privatekey";
 const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
 
+
+const walletconnect = async (params: TWalletConnectParams): Promise<any> => {
+    const walletconnect = (await import('@walletconnect/web3-provider')).default;        
+    const w3provider = new walletconnect(params);
+    await w3provider.enable();
+    const provider = new ethers.providers.Web3Provider(w3provider);
+    return provider.getSigner();
+}
+
+
+
 /** Events
  * @signerUpdate
  *      Signer
@@ -37,8 +48,8 @@ const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
  *      
  */
 
-@customElement('eth-connect')
-export class EthConnect extends LitElement{    
+@customElement('eth-wallet-connect')
+export class EthWalletConnect extends LitElement{    
     static styles = [css `
         :host{
             font-family: var(--body-font, Helvetica, Arial, sans-serif);
@@ -183,13 +194,6 @@ export class EthConnect extends LitElement{
         const provider = new ethers.providers.Web3Provider(w3provider);
         return provider.getSigner();
     }
-    private static async walletconnect(params: TWalletConnectParams): Promise<any>{
-        const walletconnect = (await import('@walletconnect/web3-provider')).default;        
-        const w3provider = new walletconnect(params);
-        await w3provider.enable();
-        const provider = new ethers.providers.Web3Provider(w3provider);
-        return provider.getSigner();
-    }
     private connectPrivateKey(key: string){
         try{
             const signer = new ethers.Wallet(key);
@@ -229,7 +233,7 @@ export class EthConnect extends LitElement{
         else if(pr === 'walletconnect'){
             this.modalHeader = "";
             if(this.connectionConfig.wallet.walletconnect){
-                EthConnect.walletconnect(this.connectionConfig.wallet.walletconnect)
+                walletconnect(this.connectionConfig.wallet.walletconnect)
                     .then(r => this._onConnected(r, pr))
                     .catch(e => {});
             }
@@ -427,6 +431,8 @@ export class EthConnect extends LitElement{
 
 declare global {
     interface HTMLElementTagNameMap {
-        'eth-connect': EthConnect;
+        'eth-wallet-connect': EthWalletConnect;
     }
 }
+/*
+*/

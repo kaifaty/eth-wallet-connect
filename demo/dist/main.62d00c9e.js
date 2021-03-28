@@ -44029,193 +44029,7 @@ const SVG_IMAGES = {
   'web 3.0 injected': "<svg width=\"80\" height=\"80\" viewBox=\"0 0 80 80\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M32.6017 32.5748L36.9988 33.7425V32.2155L37.3577 31.8563H39.8703V33.6527V34.9102H37.1782L33.858 33.473L32.6017 32.5748Z\" fill=\"#CDBDB2\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M46.9594 32.5748L42.6521 33.7425V32.2155L42.2932 31.8563H39.7806V33.6527V34.9102H42.4726L45.7928 33.473L46.9594 32.5748Z\" fill=\"#CDBDB2\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M37.3577 29.2514L36.9987 32.2155L37.4474 31.8562H42.1137L42.6521 32.2155L42.2931 29.2514L41.5753 28.8023L37.9858 28.8921L37.3577 29.2514Z\" fill=\"#393939\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M34.9348 9.22144L37.0885 14.2514L38.0756 28.8921H41.5753L42.6521 14.2514L44.6263 9.22144H34.9348Z\" fill=\"#F89C35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M25.5126 20.2696L23 27.545L29.2815 27.1857H33.3196V24.042L33.1401 17.575L32.2428 18.2935L25.5126 20.2696Z\" fill=\"#F89D35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M30.2686 21.0779L37.6269 21.2575L36.8193 25.03L33.3196 24.1318L30.2686 21.0779Z\" fill=\"#D87C30\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M30.2686 21.1677L33.3196 24.042V26.9162L30.2686 21.1677Z\" fill=\"#EA8D3A\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M33.3196 24.1317L36.909 25.0299L38.0756 28.8921L37.2679 29.3412L33.3196 27.0059V24.1317Z\" fill=\"#F89D35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M33.3196 27.006L32.6017 32.5749L37.3577 29.2516L33.3196 27.006Z\" fill=\"#EB8F35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M37.6269 21.2576L38.0756 28.8923L36.7296 24.9851L37.6269 21.2576Z\" fill=\"#EA8E3A\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M29.1917 27.0959L33.3196 27.006L32.6017 32.5749L29.1917 27.0959Z\" fill=\"#D87C30\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24.9742 35L32.6017 32.5748L29.1918 27.0958L23 27.5449L24.9742 35Z\" fill=\"#EB8F35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M37.0885 14.2515L33.2299 17.485L30.2686 21.0778L37.6269 21.3473L37.0885 14.2515Z\" fill=\"#E8821E\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M32.6017 32.5749L37.3577 29.2516L36.9988 32.1258V33.7426L33.7683 33.1139L32.6017 32.5749Z\" fill=\"#DFCEC3\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M46.9594 32.5749L42.2932 29.2516L42.6521 32.1258V33.7426L45.8826 33.1139L46.9594 32.5749Z\" fill=\"#DFCEC3\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M35.6527 22.8743L36.6398 24.9402L33.1401 24.042L35.6527 22.8743Z\" fill=\"#393939\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24.8844 5L37.0885 14.2515L35.0246 9.22156L24.8844 5Z\" fill=\"#E88F35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M24.8845 5L23.2692 9.94012L24.1666 15.3293L23.5384 15.6886L24.4358 16.497L23.7179 17.1257L24.705 18.024L24.0768 18.5629L25.5126 20.3593L32.2428 18.2934C35.5331 15.6587 37.1483 14.3114 37.0885 14.2515C37.0287 14.1916 32.9607 11.1078 24.8845 5V5Z\" fill=\"#8E5A30\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.0485 20.2696L56.5611 27.545L50.2796 27.1857H46.2415V24.042L46.421 17.575L47.3183 18.2935L54.0485 20.2696Z\" fill=\"#F89D35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M49.2925 21.0779L41.9342 21.2575L42.7418 25.03L46.2415 24.1318L49.2925 21.0779Z\" fill=\"#D87C30\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M49.2925 21.1677L46.2415 24.042V26.9162L49.2925 21.1677Z\" fill=\"#EA8D3A\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M46.2415 24.1317L42.6521 25.0299L41.4855 28.8921L42.2931 29.3412L46.2415 27.0059V24.1317Z\" fill=\"#F89D35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M46.2415 27.006L46.9594 32.5749L42.2932 29.3414L46.2415 27.006Z\" fill=\"#EB8F35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M41.9342 21.2576L41.4855 28.8923L42.8315 24.9851L41.9342 21.2576Z\" fill=\"#EA8E3A\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M50.3694 27.0959L46.2415 27.006L46.9594 32.5749L50.3694 27.0959Z\" fill=\"#D87C30\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.5869 35L46.9594 32.5748L50.3693 27.0958L56.5611 27.5449L54.5869 35Z\" fill=\"#EB8F35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M42.4726 14.2515L46.3312 17.485L49.2925 21.0778L41.9342 21.3473L42.4726 14.2515Z\" fill=\"#E8821E\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M43.9084 22.8743L42.9213 24.9402L46.421 24.042L43.9084 22.8743Z\" fill=\"#393939\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.6767 5L42.4726 14.2515L44.5365 9.22156L54.6767 5Z\" fill=\"#E88F35\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M54.6767 5L56.2919 9.94012L55.3945 15.3293L56.0227 15.6886L55.1253 16.497L55.8432 17.1257L54.8561 18.024L55.4843 18.5629L54.0485 20.3593L47.3183 18.2934C44.028 15.6587 42.4128 14.3114 42.4726 14.2515C42.5324 14.1916 46.6005 11.1078 54.6767 5V5Z\" fill=\"#8E5A30\"/>\n    <mask id=\"mask0\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"44\" y=\"43\" width=\"27\" height=\"30\">\n    <path d=\"M59.7893 43C51.0688 43 44 49.7153 44 58.0006C44 66.0452 50.6659 72.6094 59.0362 72.9823C59.2867 72.994 59.5372 73 59.7889 73C63.8312 73 67.5181 71.5564 70.3111 69.1831C68.4607 70.3493 66.2969 71.0203 63.9843 71.0203C60.225 71.0203 56.8566 69.2478 54.5923 66.4535C52.8471 64.496 51.7154 61.6013 51.6382 58.3532V57.6464C51.7154 54.3984 52.8467 51.504 54.5923 49.5465C56.8566 46.7533 60.2246 44.9812 63.9839 44.9812C66.2965 44.9812 68.4619 45.6522 70.3123 46.818C67.5335 44.4567 63.8684 43.015 59.8494 43.0015C59.8288 43.0015 59.8091 43 59.7889 43H59.7893Z\" fill=\"white\"/>\n    </mask>\n    <g mask=\"url(#mask0)\">\n    <path d=\"M70.3132 43H44.0009V72.9996H70.3132V43Z\" fill=\"url(#paint0_linear)\"/>\n    </g>\n    <mask id=\"mask1\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"54\" y=\"44\" width=\"22\" height=\"28\">\n    <path d=\"M54.4035 44.8797H75.7725V71.1952H54.4035V44.8797Z\" fill=\"white\"/>\n    </mask>\n    <g mask=\"url(#mask1)\">\n    <mask id=\"mask2\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"54\" y=\"44\" width=\"22\" height=\"28\">\n    <path d=\"M54.5923 49.5466C56.0406 47.9226 57.9124 46.9429 59.9559 46.9429C64.553 46.9429 68.2787 51.8932 68.2787 58.0006C68.2787 64.107 64.553 69.0569 59.9559 69.0569C57.9124 69.0569 56.0406 68.0776 54.5923 66.4535C56.8566 69.2479 60.2246 71.0204 63.9839 71.0204C66.2965 71.0204 68.4603 70.3494 70.3107 69.1832C73.5429 66.4359 75.5789 62.4446 75.5789 58.0006C75.5789 53.5571 73.5429 49.5643 70.3123 46.8181C68.4623 45.6523 66.2969 44.9813 63.9843 44.9813C60.2246 44.9813 56.8566 46.7534 54.5923 49.5466Z\" fill=\"white\"/>\n    </mask>\n    <g mask=\"url(#mask2)\">\n    <path d=\"M75.5793 44.9813H54.5923V71.0204H75.5793V44.9813Z\" fill=\"url(#paint1_linear)\"/>\n    </g>\n    </g>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19 43C10.7157 43 4 49.7158 4 58C4 66.2843 10.7157 73 19 73C27.2843 73 34 66.2843 34 58C34 49.7158 27.2843 43 19 43Z\" fill=\"#4360DF\"/>\n    <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M19.4798 57.1725C20.1844 57.2528 20.8891 57.333 21.7554 57.2802C24.1026 57.137 25.5244 55.8183 25.4235 53.8472C25.3207 51.8418 23.4291 50.6062 21.5365 50.7217C18.4521 50.9098 16.184 53.8739 15.9286 57.2616C16.3474 57.1543 16.7883 57.0902 17.2041 57.0648C18.0705 57.012 18.7751 57.0922 19.4798 57.1725ZM13.4334 61.5567C13.5307 63.3951 15.3227 64.5277 17.1158 64.4217C20.0378 64.2493 22.1867 61.5323 22.4286 58.4268C22.0318 58.5253 21.6142 58.5841 21.2202 58.6073C20.3994 58.6558 19.7318 58.5822 19.0642 58.5086C18.3967 58.435 17.729 58.3614 16.9083 58.4099C14.6847 58.5412 13.3376 59.7499 13.4334 61.5567Z\" fill=\"white\"/>\n    <defs>\n    <linearGradient id=\"paint0_linear\" x1=\"57.1568\" y1=\"43\" x2=\"57.1568\" y2=\"72.9996\" gradientUnits=\"userSpaceOnUse\">\n    <stop stop-color=\"#FF1B2D\"/>\n    <stop offset=\"0.25\" stop-color=\"#FF1B2D\"/>\n    <stop offset=\"0.3125\" stop-color=\"#FF1B2D\"/>\n    <stop offset=\"0.34375\" stop-color=\"#FF1B2D\"/>\n    <stop offset=\"0.375\" stop-color=\"#FE1B2D\"/>\n    <stop offset=\"0.39063\" stop-color=\"#FD1A2D\"/>\n    <stop offset=\"0.40625\" stop-color=\"#FD1A2C\"/>\n    <stop offset=\"0.42188\" stop-color=\"#FC1A2C\"/>\n    <stop offset=\"0.4375\" stop-color=\"#FB1A2C\"/>\n    <stop offset=\"0.44531\" stop-color=\"#FA1A2C\"/>\n    <stop offset=\"0.45313\" stop-color=\"#FA192C\"/>\n    <stop offset=\"0.46094\" stop-color=\"#F9192B\"/>\n    <stop offset=\"0.46875\" stop-color=\"#F9192B\"/>\n    <stop offset=\"0.47656\" stop-color=\"#F8192B\"/>\n    <stop offset=\"0.48438\" stop-color=\"#F8192B\"/>\n    <stop offset=\"0.49219\" stop-color=\"#F7192B\"/>\n    <stop offset=\"0.5\" stop-color=\"#F6182B\"/>\n    <stop offset=\"0.50781\" stop-color=\"#F6182A\"/>\n    <stop offset=\"0.51563\" stop-color=\"#F5182A\"/>\n    <stop offset=\"0.52344\" stop-color=\"#F4182A\"/>\n    <stop offset=\"0.53125\" stop-color=\"#F4172A\"/>\n    <stop offset=\"0.53906\" stop-color=\"#F3172A\"/>\n    <stop offset=\"0.54688\" stop-color=\"#F21729\"/>\n    <stop offset=\"0.55469\" stop-color=\"#F11729\"/>\n    <stop offset=\"0.5625\" stop-color=\"#F01729\"/>\n    <stop offset=\"0.57031\" stop-color=\"#F01629\"/>\n    <stop offset=\"0.57813\" stop-color=\"#EF1628\"/>\n    <stop offset=\"0.58594\" stop-color=\"#EE1628\"/>\n    <stop offset=\"0.59375\" stop-color=\"#ED1528\"/>\n    <stop offset=\"0.60156\" stop-color=\"#EC1528\"/>\n    <stop offset=\"0.60938\" stop-color=\"#EB1527\"/>\n    <stop offset=\"0.61719\" stop-color=\"#EA1527\"/>\n    <stop offset=\"0.625\" stop-color=\"#E91427\"/>\n    <stop offset=\"0.62891\" stop-color=\"#E81427\"/>\n    <stop offset=\"0.63281\" stop-color=\"#E81426\"/>\n    <stop offset=\"0.63672\" stop-color=\"#E71426\"/>\n    <stop offset=\"0.64063\" stop-color=\"#E71426\"/>\n    <stop offset=\"0.64453\" stop-color=\"#E61326\"/>\n    <stop offset=\"0.64844\" stop-color=\"#E61326\"/>\n    <stop offset=\"0.65234\" stop-color=\"#E51326\"/>\n    <stop offset=\"0.65625\" stop-color=\"#E51326\"/>\n    <stop offset=\"0.66016\" stop-color=\"#E41325\"/>\n    <stop offset=\"0.66406\" stop-color=\"#E41325\"/>\n    <stop offset=\"0.66797\" stop-color=\"#E31225\"/>\n    <stop offset=\"0.67188\" stop-color=\"#E21225\"/>\n    <stop offset=\"0.67578\" stop-color=\"#E21225\"/>\n    <stop offset=\"0.67969\" stop-color=\"#E11225\"/>\n    <stop offset=\"0.68359\" stop-color=\"#E11224\"/>\n    <stop offset=\"0.6875\" stop-color=\"#E01224\"/>\n    <stop offset=\"0.69141\" stop-color=\"#E01124\"/>\n    <stop offset=\"0.69531\" stop-color=\"#DF1124\"/>\n    <stop offset=\"0.69922\" stop-color=\"#DE1124\"/>\n    <stop offset=\"0.70313\" stop-color=\"#DE1124\"/>\n    <stop offset=\"0.70703\" stop-color=\"#DD1123\"/>\n    <stop offset=\"0.71094\" stop-color=\"#DD1023\"/>\n    <stop offset=\"0.71484\" stop-color=\"#DC1023\"/>\n    <stop offset=\"0.71875\" stop-color=\"#DB1023\"/>\n    <stop offset=\"0.72266\" stop-color=\"#DB1023\"/>\n    <stop offset=\"0.72656\" stop-color=\"#DA1023\"/>\n    <stop offset=\"0.73047\" stop-color=\"#DA1022\"/>\n    <stop offset=\"0.73438\" stop-color=\"#D90F22\"/>\n    <stop offset=\"0.73828\" stop-color=\"#D80F22\"/>\n    <stop offset=\"0.74219\" stop-color=\"#D80F22\"/>\n    <stop offset=\"0.74609\" stop-color=\"#D70F22\"/>\n    <stop offset=\"0.75\" stop-color=\"#D60F21\"/>\n    <stop offset=\"0.75391\" stop-color=\"#D60E21\"/>\n    <stop offset=\"0.75781\" stop-color=\"#D50E21\"/>\n    <stop offset=\"0.76172\" stop-color=\"#D40E21\"/>\n    <stop offset=\"0.76563\" stop-color=\"#D40E21\"/>\n    <stop offset=\"0.76953\" stop-color=\"#D30E21\"/>\n    <stop offset=\"0.77344\" stop-color=\"#D20D20\"/>\n    <stop offset=\"0.77734\" stop-color=\"#D20D20\"/>\n    <stop offset=\"0.78125\" stop-color=\"#D10D20\"/>\n    <stop offset=\"0.78516\" stop-color=\"#D00D20\"/>\n    <stop offset=\"0.78906\" stop-color=\"#D00C20\"/>\n    <stop offset=\"0.79297\" stop-color=\"#CF0C1F\"/>\n    <stop offset=\"0.79688\" stop-color=\"#CE0C1F\"/>\n    <stop offset=\"0.80078\" stop-color=\"#CE0C1F\"/>\n    <stop offset=\"0.80469\" stop-color=\"#CD0C1F\"/>\n    <stop offset=\"0.80859\" stop-color=\"#CC0B1F\"/>\n    <stop offset=\"0.8125\" stop-color=\"#CB0B1E\"/>\n    <stop offset=\"0.81641\" stop-color=\"#CB0B1E\"/>\n    <stop offset=\"0.82031\" stop-color=\"#CA0B1E\"/>\n    <stop offset=\"0.82422\" stop-color=\"#C90A1E\"/>\n    <stop offset=\"0.82813\" stop-color=\"#C80A1E\"/>\n    <stop offset=\"0.83203\" stop-color=\"#C80A1D\"/>\n    <stop offset=\"0.83594\" stop-color=\"#C70A1D\"/>\n    <stop offset=\"0.83984\" stop-color=\"#C60A1D\"/>\n    <stop offset=\"0.84375\" stop-color=\"#C5091D\"/>\n    <stop offset=\"0.84766\" stop-color=\"#C5091C\"/>\n    <stop offset=\"0.85156\" stop-color=\"#C4091C\"/>\n    <stop offset=\"0.85547\" stop-color=\"#C3091C\"/>\n    <stop offset=\"0.85938\" stop-color=\"#C2081C\"/>\n    <stop offset=\"0.86328\" stop-color=\"#C2081C\"/>\n    <stop offset=\"0.86719\" stop-color=\"#C1081B\"/>\n    <stop offset=\"0.87109\" stop-color=\"#C0081B\"/>\n    <stop offset=\"0.875\" stop-color=\"#BF071B\"/>\n    <stop offset=\"0.87891\" stop-color=\"#BE071B\"/>\n    <stop offset=\"0.88281\" stop-color=\"#BE071A\"/>\n    <stop offset=\"0.88672\" stop-color=\"#BD071A\"/>\n    <stop offset=\"0.89063\" stop-color=\"#BC061A\"/>\n    <stop offset=\"0.89453\" stop-color=\"#BB061A\"/>\n    <stop offset=\"0.89844\" stop-color=\"#BA061A\"/>\n    <stop offset=\"0.90234\" stop-color=\"#BA0619\"/>\n    <stop offset=\"0.90625\" stop-color=\"#B90519\"/>\n    <stop offset=\"0.91016\" stop-color=\"#B80519\"/>\n    <stop offset=\"0.91406\" stop-color=\"#B70519\"/>\n    <stop offset=\"0.91797\" stop-color=\"#B60518\"/>\n    <stop offset=\"0.92188\" stop-color=\"#B50418\"/>\n    <stop offset=\"0.92578\" stop-color=\"#B50418\"/>\n    <stop offset=\"0.92969\" stop-color=\"#B40418\"/>\n    <stop offset=\"0.93359\" stop-color=\"#B30417\"/>\n    <stop offset=\"0.9375\" stop-color=\"#B20317\"/>\n    <stop offset=\"0.94141\" stop-color=\"#B10317\"/>\n    <stop offset=\"0.94531\" stop-color=\"#B00317\"/>\n    <stop offset=\"0.94922\" stop-color=\"#AF0316\"/>\n    <stop offset=\"0.95313\" stop-color=\"#AE0216\"/>\n    <stop offset=\"0.95703\" stop-color=\"#AE0216\"/>\n    <stop offset=\"0.96094\" stop-color=\"#AD0216\"/>\n    <stop offset=\"0.96484\" stop-color=\"#AC0115\"/>\n    <stop offset=\"0.96875\" stop-color=\"#AB0115\"/>\n    <stop offset=\"0.97266\" stop-color=\"#AA0115\"/>\n    <stop offset=\"0.97656\" stop-color=\"#A90115\"/>\n    <stop offset=\"0.98047\" stop-color=\"#A80014\"/>\n    <stop offset=\"0.98438\" stop-color=\"#A70014\"/>\n    <stop offset=\"1\" stop-color=\"#A70014\"/>\n    </linearGradient>\n    <linearGradient id=\"paint1_linear\" x1=\"65.0854\" y1=\"44.981\" x2=\"65.0854\" y2=\"71.0196\" gradientUnits=\"userSpaceOnUse\">\n    <stop stop-color=\"#9C0000\"/>\n    <stop offset=\"0.00781\" stop-color=\"#9C0000\"/>\n    <stop offset=\"0.01172\" stop-color=\"#9D0000\"/>\n    <stop offset=\"0.01563\" stop-color=\"#9D0101\"/>\n    <stop offset=\"0.01953\" stop-color=\"#9E0101\"/>\n    <stop offset=\"0.02344\" stop-color=\"#9E0202\"/>\n    <stop offset=\"0.02734\" stop-color=\"#9F0202\"/>\n    <stop offset=\"0.03125\" stop-color=\"#9F0202\"/>\n    <stop offset=\"0.03516\" stop-color=\"#A00303\"/>\n    <stop offset=\"0.03906\" stop-color=\"#A00303\"/>\n    <stop offset=\"0.04297\" stop-color=\"#A10404\"/>\n    <stop offset=\"0.04688\" stop-color=\"#A10404\"/>\n    <stop offset=\"0.05078\" stop-color=\"#A20505\"/>\n    <stop offset=\"0.05469\" stop-color=\"#A30505\"/>\n    <stop offset=\"0.05859\" stop-color=\"#A30505\"/>\n    <stop offset=\"0.0625\" stop-color=\"#A40606\"/>\n    <stop offset=\"0.06641\" stop-color=\"#A40606\"/>\n    <stop offset=\"0.07031\" stop-color=\"#A50707\"/>\n    <stop offset=\"0.07422\" stop-color=\"#A50707\"/>\n    <stop offset=\"0.07813\" stop-color=\"#A60808\"/>\n    <stop offset=\"0.08203\" stop-color=\"#A70808\"/>\n    <stop offset=\"0.08594\" stop-color=\"#A70808\"/>\n    <stop offset=\"0.08984\" stop-color=\"#A80909\"/>\n    <stop offset=\"0.09375\" stop-color=\"#A80909\"/>\n    <stop offset=\"0.09766\" stop-color=\"#A90A0A\"/>\n    <stop offset=\"0.10156\" stop-color=\"#A90A0A\"/>\n    <stop offset=\"0.10547\" stop-color=\"#AA0B0B\"/>\n    <stop offset=\"0.10938\" stop-color=\"#AA0B0B\"/>\n    <stop offset=\"0.11328\" stop-color=\"#AB0B0B\"/>\n    <stop offset=\"0.11719\" stop-color=\"#AC0C0C\"/>\n    <stop offset=\"0.12109\" stop-color=\"#AC0C0C\"/>\n    <stop offset=\"0.125\" stop-color=\"#AD0D0D\"/>\n    <stop offset=\"0.12891\" stop-color=\"#AD0D0D\"/>\n    <stop offset=\"0.13281\" stop-color=\"#AE0D0D\"/>\n    <stop offset=\"0.13672\" stop-color=\"#AE0E0E\"/>\n    <stop offset=\"0.14063\" stop-color=\"#AF0E0E\"/>\n    <stop offset=\"0.14453\" stop-color=\"#AF0F0F\"/>\n    <stop offset=\"0.14844\" stop-color=\"#B00F0F\"/>\n    <stop offset=\"0.15234\" stop-color=\"#B11010\"/>\n    <stop offset=\"0.15625\" stop-color=\"#B11010\"/>\n    <stop offset=\"0.16016\" stop-color=\"#B21010\"/>\n    <stop offset=\"0.16406\" stop-color=\"#B21111\"/>\n    <stop offset=\"0.16797\" stop-color=\"#B31111\"/>\n    <stop offset=\"0.17188\" stop-color=\"#B31212\"/>\n    <stop offset=\"0.17578\" stop-color=\"#B41212\"/>\n    <stop offset=\"0.17969\" stop-color=\"#B51313\"/>\n    <stop offset=\"0.18359\" stop-color=\"#B51313\"/>\n    <stop offset=\"0.1875\" stop-color=\"#B61313\"/>\n    <stop offset=\"0.19141\" stop-color=\"#B61414\"/>\n    <stop offset=\"0.19531\" stop-color=\"#B71414\"/>\n    <stop offset=\"0.19922\" stop-color=\"#B71515\"/>\n    <stop offset=\"0.20313\" stop-color=\"#B81515\"/>\n    <stop offset=\"0.20703\" stop-color=\"#B81616\"/>\n    <stop offset=\"0.21094\" stop-color=\"#B91616\"/>\n    <stop offset=\"0.21484\" stop-color=\"#BA1616\"/>\n    <stop offset=\"0.21875\" stop-color=\"#BA1717\"/>\n    <stop offset=\"0.22266\" stop-color=\"#BB1717\"/>\n    <stop offset=\"0.22656\" stop-color=\"#BB1818\"/>\n    <stop offset=\"0.23047\" stop-color=\"#BC1818\"/>\n    <stop offset=\"0.23438\" stop-color=\"#BC1919\"/>\n    <stop offset=\"0.23828\" stop-color=\"#BD1919\"/>\n    <stop offset=\"0.24219\" stop-color=\"#BD1919\"/>\n    <stop offset=\"0.24609\" stop-color=\"#BE1A1A\"/>\n    <stop offset=\"0.25\" stop-color=\"#BF1A1A\"/>\n    <stop offset=\"0.25391\" stop-color=\"#BF1B1B\"/>\n    <stop offset=\"0.25781\" stop-color=\"#C01B1B\"/>\n    <stop offset=\"0.26172\" stop-color=\"#C01B1B\"/>\n    <stop offset=\"0.26563\" stop-color=\"#C11C1C\"/>\n    <stop offset=\"0.26953\" stop-color=\"#C11C1C\"/>\n    <stop offset=\"0.27344\" stop-color=\"#C21D1D\"/>\n    <stop offset=\"0.27734\" stop-color=\"#C21D1D\"/>\n    <stop offset=\"0.28125\" stop-color=\"#C31E1E\"/>\n    <stop offset=\"0.28516\" stop-color=\"#C41E1E\"/>\n    <stop offset=\"0.28906\" stop-color=\"#C41E1E\"/>\n    <stop offset=\"0.29297\" stop-color=\"#C51F1F\"/>\n    <stop offset=\"0.29688\" stop-color=\"#C51F1F\"/>\n    <stop offset=\"0.30078\" stop-color=\"#C62020\"/>\n    <stop offset=\"0.30469\" stop-color=\"#C62020\"/>\n    <stop offset=\"0.30859\" stop-color=\"#C72121\"/>\n    <stop offset=\"0.3125\" stop-color=\"#C82121\"/>\n    <stop offset=\"0.31641\" stop-color=\"#C82121\"/>\n    <stop offset=\"0.32031\" stop-color=\"#C92222\"/>\n    <stop offset=\"0.32422\" stop-color=\"#C92222\"/>\n    <stop offset=\"0.32813\" stop-color=\"#CA2323\"/>\n    <stop offset=\"0.33203\" stop-color=\"#CA2323\"/>\n    <stop offset=\"0.33594\" stop-color=\"#CB2424\"/>\n    <stop offset=\"0.33984\" stop-color=\"#CB2424\"/>\n    <stop offset=\"0.34375\" stop-color=\"#CC2424\"/>\n    <stop offset=\"0.34766\" stop-color=\"#CD2525\"/>\n    <stop offset=\"0.35156\" stop-color=\"#CD2525\"/>\n    <stop offset=\"0.35547\" stop-color=\"#CE2626\"/>\n    <stop offset=\"0.35938\" stop-color=\"#CE2626\"/>\n    <stop offset=\"0.36328\" stop-color=\"#CF2626\"/>\n    <stop offset=\"0.36719\" stop-color=\"#CF2727\"/>\n    <stop offset=\"0.37109\" stop-color=\"#D02727\"/>\n    <stop offset=\"0.375\" stop-color=\"#D02828\"/>\n    <stop offset=\"0.37891\" stop-color=\"#D12828\"/>\n    <stop offset=\"0.38281\" stop-color=\"#D22929\"/>\n    <stop offset=\"0.38672\" stop-color=\"#D22929\"/>\n    <stop offset=\"0.39063\" stop-color=\"#D32929\"/>\n    <stop offset=\"0.39453\" stop-color=\"#D32A2A\"/>\n    <stop offset=\"0.39844\" stop-color=\"#D42A2A\"/>\n    <stop offset=\"0.40234\" stop-color=\"#D42B2B\"/>\n    <stop offset=\"0.40625\" stop-color=\"#D52B2B\"/>\n    <stop offset=\"0.41016\" stop-color=\"#D62C2C\"/>\n    <stop offset=\"0.41406\" stop-color=\"#D62C2C\"/>\n    <stop offset=\"0.41797\" stop-color=\"#D72C2C\"/>\n    <stop offset=\"0.42188\" stop-color=\"#D72D2D\"/>\n    <stop offset=\"0.42578\" stop-color=\"#D82D2D\"/>\n    <stop offset=\"0.42969\" stop-color=\"#D82E2E\"/>\n    <stop offset=\"0.43359\" stop-color=\"#D92E2E\"/>\n    <stop offset=\"0.4375\" stop-color=\"#D92F2F\"/>\n    <stop offset=\"0.44141\" stop-color=\"#DA2F2F\"/>\n    <stop offset=\"0.44531\" stop-color=\"#DB2F2F\"/>\n    <stop offset=\"0.44922\" stop-color=\"#DB3030\"/>\n    <stop offset=\"0.45313\" stop-color=\"#DC3030\"/>\n    <stop offset=\"0.45703\" stop-color=\"#DC3131\"/>\n    <stop offset=\"0.46094\" stop-color=\"#DD3131\"/>\n    <stop offset=\"0.46484\" stop-color=\"#DD3232\"/>\n    <stop offset=\"0.46875\" stop-color=\"#DE3232\"/>\n    <stop offset=\"0.47266\" stop-color=\"#DE3232\"/>\n    <stop offset=\"0.47656\" stop-color=\"#DF3333\"/>\n    <stop offset=\"0.48047\" stop-color=\"#E03333\"/>\n    <stop offset=\"0.48438\" stop-color=\"#E03434\"/>\n    <stop offset=\"0.48828\" stop-color=\"#E13434\"/>\n    <stop offset=\"0.49219\" stop-color=\"#E13434\"/>\n    <stop offset=\"0.49609\" stop-color=\"#E23535\"/>\n    <stop offset=\"0.5\" stop-color=\"#E23535\"/>\n    <stop offset=\"0.50391\" stop-color=\"#E33636\"/>\n    <stop offset=\"0.50781\" stop-color=\"#E43636\"/>\n    <stop offset=\"0.51172\" stop-color=\"#E43737\"/>\n    <stop offset=\"0.51563\" stop-color=\"#E53737\"/>\n    <stop offset=\"0.51953\" stop-color=\"#E53737\"/>\n    <stop offset=\"0.52344\" stop-color=\"#E63838\"/>\n    <stop offset=\"0.52734\" stop-color=\"#E63838\"/>\n    <stop offset=\"0.53125\" stop-color=\"#E73939\"/>\n    <stop offset=\"0.53516\" stop-color=\"#E73939\"/>\n    <stop offset=\"0.53906\" stop-color=\"#E83A3A\"/>\n    <stop offset=\"0.54297\" stop-color=\"#E93A3A\"/>\n    <stop offset=\"0.54688\" stop-color=\"#E93A3A\"/>\n    <stop offset=\"0.55078\" stop-color=\"#EA3B3B\"/>\n    <stop offset=\"0.55469\" stop-color=\"#EA3B3B\"/>\n    <stop offset=\"0.55859\" stop-color=\"#EB3C3C\"/>\n    <stop offset=\"0.5625\" stop-color=\"#EB3C3C\"/>\n    <stop offset=\"0.56641\" stop-color=\"#EC3D3D\"/>\n    <stop offset=\"0.57031\" stop-color=\"#EC3D3D\"/>\n    <stop offset=\"0.57422\" stop-color=\"#ED3D3D\"/>\n    <stop offset=\"0.57813\" stop-color=\"#EE3E3E\"/>\n    <stop offset=\"0.58203\" stop-color=\"#EE3E3E\"/>\n    <stop offset=\"0.58594\" stop-color=\"#EF3F3F\"/>\n    <stop offset=\"0.58984\" stop-color=\"#EF3F3F\"/>\n    <stop offset=\"0.59375\" stop-color=\"#F03F3F\"/>\n    <stop offset=\"0.59766\" stop-color=\"#F04040\"/>\n    <stop offset=\"0.60156\" stop-color=\"#F14040\"/>\n    <stop offset=\"0.60547\" stop-color=\"#F14141\"/>\n    <stop offset=\"0.60938\" stop-color=\"#F24141\"/>\n    <stop offset=\"0.61328\" stop-color=\"#F34242\"/>\n    <stop offset=\"0.61719\" stop-color=\"#F34242\"/>\n    <stop offset=\"0.62109\" stop-color=\"#F44242\"/>\n    <stop offset=\"0.625\" stop-color=\"#F44343\"/>\n    <stop offset=\"0.62891\" stop-color=\"#F54343\"/>\n    <stop offset=\"0.63281\" stop-color=\"#F54444\"/>\n    <stop offset=\"0.63672\" stop-color=\"#F64444\"/>\n    <stop offset=\"0.64063\" stop-color=\"#F74545\"/>\n    <stop offset=\"0.64453\" stop-color=\"#F74545\"/>\n    <stop offset=\"0.64844\" stop-color=\"#F84545\"/>\n    <stop offset=\"0.65234\" stop-color=\"#F84646\"/>\n    <stop offset=\"0.65625\" stop-color=\"#F94646\"/>\n    <stop offset=\"0.66016\" stop-color=\"#F94747\"/>\n    <stop offset=\"0.66406\" stop-color=\"#FA4747\"/>\n    <stop offset=\"0.66797\" stop-color=\"#FA4848\"/>\n    <stop offset=\"0.67188\" stop-color=\"#FB4848\"/>\n    <stop offset=\"0.67578\" stop-color=\"#FC4848\"/>\n    <stop offset=\"0.67969\" stop-color=\"#FC4949\"/>\n    <stop offset=\"0.68359\" stop-color=\"#FD4949\"/>\n    <stop offset=\"0.6875\" stop-color=\"#FD4A4A\"/>\n    <stop offset=\"0.69141\" stop-color=\"#FE4A4A\"/>\n    <stop offset=\"0.69531\" stop-color=\"#FE4B4B\"/>\n    <stop offset=\"0.70313\" stop-color=\"#FF4B4B\"/>\n    <stop offset=\"0.71875\" stop-color=\"#FF4B4B\"/>\n    <stop offset=\"0.75\" stop-color=\"#FF4B4B\"/>\n    <stop offset=\"1\" stop-color=\"#FF4B4B\"/>\n    </linearGradient>\n    </defs>\n    </svg>"
 };
 exports.SVG_IMAGES = SVG_IMAGES;
-},{}],"../node_modules/lit-store/dist/store.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.createStore = createStore;
-exports.StateRecorder = void 0;
-
-class StateRecorder {
-  static start() {
-    this._log = new Map();
-  }
-
-  static recordRead(stateObj, key) {
-    if (this._log === null) return;
-    const keys = this._log.get(stateObj) || new Set();
-    keys.add(key);
-
-    this._log.set(stateObj, keys);
-  }
-
-  static finish() {
-    const stateVars = this._log;
-    this._log = null;
-    return stateVars;
-  }
-
-}
-
-exports.StateRecorder = StateRecorder;
-StateRecorder._log = null;
-
-function createStore(base) {
-  return class Store extends base {
-    constructor(...args) {
-      super();
-      this._observers = new Map();
-
-      this._initStateVars();
-    }
-
-    addComponent(component, keys) {
-      this._observers.set(component, keys);
-    }
-
-    removeComponent(component) {
-      this._observers.delete(component);
-    }
-
-    _initStateVars() {
-      if (this.data) {
-        const data = this.data;
-        this.data = {};
-
-        for (let [key, value] of Object.entries(data)) {
-          this._initStateVar(key);
-
-          this.data[key] = value;
-        }
-      }
-    }
-
-    _initStateVar(key) {
-      if (this.hasOwnProperty(key)) {
-        // Property already defined, so don't re-define.
-        return;
-      }
-
-      const self = this;
-      let value = null;
-      Object.defineProperty(this.data, key, {
-        get() {
-          StateRecorder.recordRead(self, key);
-          return value;
-        },
-
-        set(v) {
-          if (value !== v) {
-            value = v;
-
-            self._notifyChange(key);
-          }
-        },
-
-        configurable: true,
-        enumerable: true
-      });
-    }
-
-    _recordRead(key) {}
-
-    _notifyChange(key) {
-      for (const [component, keys] of this._observers) {
-        if (keys.has(key)) {
-          component.requestUpdate();
-        }
-      }
-
-      ;
-    }
-
-  };
-}
-},{}],"../node_modules/lit-store/dist/lit-store.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.observeLitElement = void 0;
-
-var _store = require("./store");
-
-const observeLitElement = LitElement => {
-  return class extends LitElement {
-    constructor() {
-      super(...arguments);
-      this._usedStores = new Set();
-    }
-
-    disconnectedCallback() {
-      super.disconnectedCallback();
-
-      this._clearObservers();
-    }
-
-    update(changedProperties) {
-      _store.StateRecorder.start(); //@ts-ignore
-
-
-      super.update(changedProperties);
-
-      this._initStateObservers();
-    }
-
-    _initStateObservers() {
-      this._clearObservers();
-
-      if (!this.isConnected) return;
-
-      this._addObservers(_store.StateRecorder.finish());
-    }
-
-    _addObservers(usedStores) {
-      for (let [store, keys] of usedStores) {
-        store.addComponent(this, keys);
-
-        this._usedStores.add(store);
-      }
-    }
-
-    _clearObservers() {
-      for (const store of this._usedStores) {
-        store.removeComponent(this);
-      }
-
-      this._usedStores.clear();
-    }
-
-  };
-};
-
-exports.observeLitElement = observeLitElement;
-},{"./store":"../node_modules/lit-store/dist/store.js"}],"../node_modules/lit-store/dist/index.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "createStore", {
-  enumerable: true,
-  get: function () {
-    return _store.createStore;
-  }
-});
-Object.defineProperty(exports, "observeLitElement", {
-  enumerable: true,
-  get: function () {
-    return _litStore.observeLitElement;
-  }
-});
-
-var _store = require("./store");
-
-var _litStore = require("./lit-store");
-},{"./store":"../node_modules/lit-store/dist/store.js","./lit-store":"../node_modules/lit-store/dist/lit-store.js"}],"../node_modules/@metamask/detect-provider/dist/index.js":[function(require,module,exports) {
+},{}],"../node_modules/@metamask/detect-provider/dist/index.js":[function(require,module,exports) {
 "use strict";
 /**
  * Returns a Promise that resolves to the value of window.ethereum if it is
@@ -44713,7 +44527,7 @@ LazyPromise.prototype.catch = function (onError) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.EthConnect = void 0;
+exports.EthWalletConnect = void 0;
 
 require("@material/mwc-button");
 
@@ -44724,8 +44538,6 @@ require("@material/mwc-textfield");
 var _ethers = require("ethers");
 
 var _icons = require("./icons");
-
-var _litStore = require("lit-store");
 
 var _detectProvider = _interopRequireDefault(require("@metamask/detect-provider"));
 
@@ -44783,12 +44595,19 @@ var __awaiter = void 0 && (void 0).__awaiter || function (thisArg, _arguments, P
   });
 };
 
-var EthConnect_1;
 const injected = 'web 3.0 injected';
 const PROVIDERS = ['privateKey', 'keystore', 'walletconnect', injected];
 const LOCAL_STORAGE_PROVIDER_NAME = "eth_connect_provider";
 const LOCAL_STORAGE_PRIVATEKEY_NAME = "eth_connect_privatekey";
 const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
+
+const walletconnect = params => __awaiter(void 0, void 0, void 0, function* () {
+  const walletconnect = (yield require("_bundle_loader")(require.resolve('@walletconnect/web3-provider'))).default;
+  const w3provider = new walletconnect(params);
+  yield w3provider.enable();
+  const provider = new _ethers.ethers.providers.Web3Provider(w3provider);
+  return provider.getSigner();
+});
 /** Events
  * @signerUpdate
  *      Signer
@@ -44808,14 +44627,15 @@ const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
  *
  */
 
-let EthConnect = EthConnect_1 = class EthConnect extends (0, _litStore.observeLitElement)(_litElement.LitElement) {
+
+let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   constructor() {
     super(...arguments);
-    this.modalContentState = 'providers';
-    this.errorContent = "";
-    this.modalHeader = "";
-    this.provider = '';
+    this.modalContentState = '';
+    this.errorContent = '';
+    this.modalHeader = '';
     this.wallet = '';
+    this.provider = '';
     this.networkChangedEventInited = false;
   }
 
@@ -44878,16 +44698,6 @@ let EthConnect = EthConnect_1 = class EthConnect extends (0, _litStore.observeLi
     });
   }
 
-  static walletconnect(params) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const walletconnect = (yield require("_bundle_loader")(require.resolve('@walletconnect/web3-provider'))).default;
-      const w3provider = new walletconnect(params);
-      yield w3provider.enable();
-      const provider = new _ethers.ethers.providers.Web3Provider(w3provider);
-      return provider.getSigner();
-    });
-  }
-
   connectPrivateKey(key) {
     try {
       const signer = new _ethers.ethers.Wallet(key);
@@ -44930,7 +44740,7 @@ let EthConnect = EthConnect_1 = class EthConnect extends (0, _litStore.observeLi
       this.modalHeader = "";
 
       if (this.connectionConfig.wallet.walletconnect) {
-        EthConnect_1.walletconnect(this.connectionConfig.wallet.walletconnect).then(r => this._onConnected(r, pr)).catch(e => {});
+        walletconnect(this.connectionConfig.wallet.walletconnect).then(r => this._onConnected(r, pr)).catch(e => {});
       } else {
         this.errorContent = "No walletconnect params provided";
       }
@@ -45067,49 +44877,36 @@ let EthConnect = EthConnect_1 = class EthConnect extends (0, _litStore.observeLi
   }
 
 };
-exports.EthConnect = EthConnect;
-EthConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n        :host{\n            font-family: var(--body-font, Helvetica, Arial, sans-serif);\n            right: 20px;\n        }\n        .header{\n            margin: 0;\n            font-size: 18px;\n        }        \n        .wallet-icon{\n            border-radius: 20px;\n            width: 45px;\n            height: 45px;\n            margin-right: 10px;\n        }\n        .wallet-icon svg{\n            width: 100%;\n            height: 100%;\n        }\n\n        .attention {\n            margin-top: 0;\n            color: #ba0000;\n            font-size: 1.1.rem;\n        }\n        .wallet{\n            display: flex;\n            align-items: center;\n            color: var(--app-text-color);\n            font-size: 12px;\n            border-radius: 20px;\n            text-align: center;\n            padding: 0 5px;\n        }\n        .wallte-short{\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        .error {\n            margin-top: 10px;\n            padding: 5px 10px;\n            font-size: 14px;\n            background-color: #d70404;\n            text-align: center;\n            color: #fff;\n            word-break: break-all;\n        }\n\n        .provider-card-wrapper {\n            flex: 1 0 25%;\n            min-width: 120px;\n            background: none;\n            outline: none;\n            border: none;\n            padding: 2px;\n        }\n\n        .provider-card {\n            cursor: pointer;\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: space-between;\n            align-items: center;\n            height: 120px;\n            border-radius: 2px;\n            border: 1px solid hsl(340, 20%, 90%);\n        }\n\n        .provider-card:hover {\n            border: 1px solid hsl(340, 90%, 70%);\n        }\n        .provider-card .title{\n            margin-top: 15px;\n        }\n\n        .wrapper {\n            display: flex;\n            flex-wrap: wrap;\n        }"])))];
-
-__decorate([(0, _litElement.property)({
-  type: String,
-  attribute: false
-})], EthConnect.prototype, "modalContentState", void 0);
-
-__decorate([(0, _litElement.property)({
-  type: String,
-  attribute: false
-})], EthConnect.prototype, "errorContent", void 0);
-
-__decorate([(0, _litElement.property)({
-  type: String,
-  attribute: false
-})], EthConnect.prototype, "modalHeader", void 0);
-
-__decorate([(0, _litElement.property)({
-  type: String,
-  attribute: false
-})], EthConnect.prototype, "provider", void 0);
-
-__decorate([(0, _litElement.property)({
-  type: String,
-  attribute: false
-})], EthConnect.prototype, "wallet", void 0);
+exports.EthWalletConnect = EthWalletConnect;
+EthWalletConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n        :host{\n            font-family: var(--body-font, Helvetica, Arial, sans-serif);\n            right: 20px;\n        }\n        .header{\n            margin: 0;\n            font-size: 18px;\n        }        \n        .wallet-icon{\n            border-radius: 20px;\n            width: 45px;\n            height: 45px;\n            margin-right: 10px;\n        }\n        .wallet-icon svg{\n            width: 100%;\n            height: 100%;\n        }\n\n        .attention {\n            margin-top: 0;\n            color: #ba0000;\n            font-size: 1.1.rem;\n        }\n        .wallet{\n            display: flex;\n            align-items: center;\n            color: var(--app-text-color);\n            font-size: 12px;\n            border-radius: 20px;\n            text-align: center;\n            padding: 0 5px;\n        }\n        .wallte-short{\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        .error {\n            margin-top: 10px;\n            padding: 5px 10px;\n            font-size: 14px;\n            background-color: #d70404;\n            text-align: center;\n            color: #fff;\n            word-break: break-all;\n        }\n\n        .provider-card-wrapper {\n            flex: 1 0 25%;\n            min-width: 120px;\n            background: none;\n            outline: none;\n            border: none;\n            padding: 2px;\n        }\n\n        .provider-card {\n            cursor: pointer;\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: space-between;\n            align-items: center;\n            height: 120px;\n            border-radius: 2px;\n            border: 1px solid hsl(340, 20%, 90%);\n        }\n\n        .provider-card:hover {\n            border: 1px solid hsl(340, 90%, 70%);\n        }\n        .provider-card .title{\n            margin-top: 15px;\n        }\n\n        .wrapper {\n            display: flex;\n            flex-wrap: wrap;\n        }"])))];
 
 __decorate([(0, _litElement.property)({
   type: Object,
   attribute: false
-})], EthConnect.prototype, "connectionConfig", void 0);
+})], EthWalletConnect.prototype, "connectionConfig", void 0);
 
-__decorate([(0, _litElement.query)('mwc-dialog')], EthConnect.prototype, "modal", void 0);
+__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "modalContentState", void 0);
 
-__decorate([(0, _litElement.query)('#keystore-file')], EthConnect.prototype, "keystoreFile", void 0);
+__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "errorContent", void 0);
 
-__decorate([(0, _litElement.query)('#keystore-password')], EthConnect.prototype, "keystorePassword", void 0);
+__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "modalHeader", void 0);
 
-__decorate([(0, _litElement.query)('#privatekey-input')], EthConnect.prototype, "privateKeyInput", void 0);
+__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "wallet", void 0);
 
-exports.EthConnect = EthConnect = EthConnect_1 = __decorate([(0, _litElement.customElement)('eth-connect')], EthConnect);
-},{"@material/mwc-button":"../node_modules/@material/mwc-button/mwc-button.js","@material/mwc-dialog":"../node_modules/@material/mwc-dialog/mwc-dialog.js","@material/mwc-textfield":"../node_modules/@material/mwc-textfield/mwc-textfield.js","ethers":"../node_modules/ethers/lib.esm/index.js","./icons":"../src/icons.ts","lit-store":"../node_modules/lit-store/dist/index.js","@metamask/detect-provider":"../node_modules/@metamask/detect-provider/dist/index.js","lit-element":"../node_modules/lit-element/lit-element.js","lit-html/directives/unsafe-svg":"../node_modules/lit-html/directives/unsafe-svg.js","./translations":"../src/translations.ts","lit-html":"../node_modules/lit-html/lit-html.js","_bundle_loader":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js","@walletconnect/web3-provider":[["cjs.23f241cb.js","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"cjs.23f241cb.js.map","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"]}],"../src/interface.ts":[function(require,module,exports) {
+__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "provider", void 0);
+
+__decorate([(0, _litElement.query)('mwc-dialog')], EthWalletConnect.prototype, "modal", void 0);
+
+__decorate([(0, _litElement.query)('#keystore-file')], EthWalletConnect.prototype, "keystoreFile", void 0);
+
+__decorate([(0, _litElement.query)('#keystore-password')], EthWalletConnect.prototype, "keystorePassword", void 0);
+
+__decorate([(0, _litElement.query)('#privatekey-input')], EthWalletConnect.prototype, "privateKeyInput", void 0);
+
+exports.EthWalletConnect = EthWalletConnect = __decorate([(0, _litElement.customElement)('eth-wallet-connect')], EthWalletConnect);
+/*
+*/
+},{"@material/mwc-button":"../node_modules/@material/mwc-button/mwc-button.js","@material/mwc-dialog":"../node_modules/@material/mwc-dialog/mwc-dialog.js","@material/mwc-textfield":"../node_modules/@material/mwc-textfield/mwc-textfield.js","ethers":"../node_modules/ethers/lib.esm/index.js","./icons":"../src/icons.ts","@metamask/detect-provider":"../node_modules/@metamask/detect-provider/dist/index.js","lit-element":"../node_modules/lit-element/lit-element.js","lit-html/directives/unsafe-svg":"../node_modules/lit-html/directives/unsafe-svg.js","./translations":"../src/translations.ts","lit-html":"../node_modules/lit-html/lit-html.js","_bundle_loader":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js","@walletconnect/web3-provider":[["cjs.23f241cb.js","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"cjs.23f241cb.js.map","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"]}],"../src/interface.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45165,7 +44962,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64297" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54684" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
