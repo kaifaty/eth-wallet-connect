@@ -19,6 +19,24 @@ const LOCAL_STORAGE_PROVIDER_NAME = "eth_connect_provider";
 const LOCAL_STORAGE_PRIVATEKEY_NAME = "eth_connect_privatekey";
 const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
 
+/** Events
+ * @signerUpdate
+ *      Signer
+ * 
+ * @changeNetwork
+ *      {
+ *          network: string
+ *          informRequired: string
+ *      }
+ * 
+ * @connected
+ *      {
+ *          signer: Signer
+ *          wallet: string
+ *      }
+ * @disconnected
+ *      
+ */
 
 @customElement('eth-connect')
 export class EthConnect extends observeLitElement(LitElement){    
