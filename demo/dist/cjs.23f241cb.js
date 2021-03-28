@@ -68815,9 +68815,7 @@ function isCompressed(value) {
   assert(toTypeString(value) === 'Boolean', 'Expected compressed to be a Boolean');
 }
 
-function getAssertedOutput() {
-  let output = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : len => new Uint8Array(len);
-  let length = arguments.length > 1 ? arguments[1] : undefined;
+function getAssertedOutput(output = len => new Uint8Array(len), length) {
   if (typeof output === 'function') output = output(length);
   isUint8Array('output', output, length);
   return output;
@@ -68887,9 +68885,7 @@ module.exports = secp256k1 => {
       return secp256k1.publicKeyVerify(pubkey) === 0;
     },
 
-    publicKeyCreate(seckey) {
-      let compressed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      let output = arguments.length > 2 ? arguments[2] : undefined;
+    publicKeyCreate(seckey, compressed = true, output) {
       isUint8Array('private key', seckey, 32);
       isCompressed(compressed);
       output = getAssertedOutput(output, compressed ? 33 : 65);
@@ -68906,9 +68902,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    publicKeyConvert(pubkey) {
-      let compressed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      let output = arguments.length > 2 ? arguments[2] : undefined;
+    publicKeyConvert(pubkey, compressed = true, output) {
       isUint8Array('public key', pubkey, [33, 65]);
       isCompressed(compressed);
       output = getAssertedOutput(output, compressed ? 33 : 65);
@@ -68925,9 +68919,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    publicKeyNegate(pubkey) {
-      let compressed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      let output = arguments.length > 2 ? arguments[2] : undefined;
+    publicKeyNegate(pubkey, compressed = true, output) {
       isUint8Array('public key', pubkey, [33, 65]);
       isCompressed(compressed);
       output = getAssertedOutput(output, compressed ? 33 : 65);
@@ -68947,9 +68939,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    publicKeyCombine(pubkeys) {
-      let compressed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-      let output = arguments.length > 2 ? arguments[2] : undefined;
+    publicKeyCombine(pubkeys, compressed = true, output) {
       assert(Array.isArray(pubkeys), 'Expected public keys to be an Array');
       assert(pubkeys.length > 0, 'Expected public keys array will have more than zero items');
 
@@ -68975,9 +68965,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    publicKeyTweakAdd(pubkey, tweak) {
-      let compressed = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-      let output = arguments.length > 3 ? arguments[3] : undefined;
+    publicKeyTweakAdd(pubkey, tweak, compressed = true, output) {
       isUint8Array('public key', pubkey, [33, 65]);
       isUint8Array('tweak', tweak, 32);
       isCompressed(compressed);
@@ -68995,9 +68983,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    publicKeyTweakMul(pubkey, tweak) {
-      let compressed = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-      let output = arguments.length > 3 ? arguments[3] : undefined;
+    publicKeyTweakMul(pubkey, tweak, compressed = true, output) {
       isUint8Array('public key', pubkey, [33, 65]);
       isUint8Array('tweak', tweak, 32);
       isCompressed(compressed);
@@ -69063,9 +69049,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    ecdsaSign(msg32, seckey) {
-      let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      let output = arguments.length > 3 ? arguments[3] : undefined;
+    ecdsaSign(msg32, seckey, options = {}, output) {
       isUint8Array('message', msg32, 32);
       isUint8Array('private key', seckey, 32);
       assert(toTypeString(options) === 'Object', 'Expected options to be an Object');
@@ -69109,9 +69093,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    ecdsaRecover(sig, recid, msg32) {
-      let compressed = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
-      let output = arguments.length > 4 ? arguments[4] : undefined;
+    ecdsaRecover(sig, recid, msg32, compressed = true, output) {
       isUint8Array('signature', sig, 64);
       assert(toTypeString(recid) === 'Number' && recid >= 0 && recid <= 3, 'Expected recovery id to be a Number within interval [0, 3]');
       isUint8Array('message', msg32, 32);
@@ -69133,9 +69115,7 @@ module.exports = secp256k1 => {
       }
     },
 
-    ecdh(pubkey, seckey) {
-      let options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      let output = arguments.length > 3 ? arguments[3] : undefined;
+    ecdh(pubkey, seckey, options = {}, output) {
       isUint8Array('public key', pubkey, [33, 65]);
       isUint8Array('private key', seckey, 32);
       assert(toTypeString(options) === 'Object', 'Expected options to be an Object');
@@ -87614,19 +87594,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const processFn = (fn, options, proxy, unwrapped) => function () {
-  for (var _len = arguments.length, arguments_ = new Array(_len), _key = 0; _key < _len; _key++) {
-    arguments_[_key] = arguments[_key];
-  }
-
+const processFn = (fn, options, proxy, unwrapped) => function (...arguments_) {
   const P = options.promiseModule;
   return new P((resolve, reject) => {
     if (options.multiArgs) {
-      arguments_.push(function () {
-        for (var _len2 = arguments.length, result = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-          result[_key2] = arguments[_key2];
-        }
-
+      arguments_.push((...result) => {
         if (options.errorFirst) {
           if (result[0]) {
             reject(result);
@@ -93130,7 +93102,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55777" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61999" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

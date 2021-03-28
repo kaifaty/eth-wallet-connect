@@ -44048,13 +44048,11 @@ exports.SVG_IMAGES = SVG_IMAGES;
  * given timeout, otherwise null.
  */
 
-function detectEthereumProvider() {
-  let {
-    mustBeMetaMask = false,
-    silent = false,
-    timeout = 3000
-  } = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-
+function detectEthereumProvider({
+  mustBeMetaMask = false,
+  silent = false,
+  timeout = 3000
+} = {}) {
   _validateInputs();
 
   let handled = false;
@@ -44188,70 +44186,90 @@ const unsafeSVG = (0, _litHtml.directive)(value => part => {
 exports.unsafeSVG = unsafeSVG;
 },{"../lib/dom.js":"../node_modules/lit-html/lib/dom.js","../lib/parts.js":"../node_modules/lit-html/lib/parts.js","../lit-html.js":"../node_modules/lit-html/lit-html.js"}],"../node_modules/simple-translations/src/main.ts":[function(require,module,exports) {
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Translate = void 0;
-var Translate = /** @class */ (function () {
-    function Translate(data) {
-        this.lang = 'en';
-        if (data) {
-            this.setStorage(data);
-        }
-    }
-    Translate.prototype.setStorage = function (data) {
-        this.data = data;
-    };
-    Translate.prototype.appendStorage = function (data) {
-        var _this = this;
-        Object.keys(data).forEach(function (key) {
-            if (_this.data[key]) {
-                _this.data[key] = __assign(__assign({}, _this.data[key]), data[key]);
-            }
-            else {
-                _this.data[key] = data[key];
-            }
-        });
-    };
-    Translate.prototype.get = function (key, values) {
-        var _this = this;
-        if (!key)
-            return '';
-        var path = key.split('.');
-        var v = {};
-        try {
-            v = (path.reduce(function (a, k) { return a[k]; }, this.data) ||
-                (path.length > 1
-                    ? path.slice(1).reduce(function (a, k) { return a[k]; }, this.data.common)
-                    : path.reduce(function (a, k) { return a === null || a === void 0 ? void 0 : a[k]; }, this.data.common)));
-        }
-        catch (e) {
-            return key;
-        }
-        var res = (v === null || v === void 0 ? void 0 : v[this.lang]) || (v === null || v === void 0 ? void 0 : v.en) || key;
-        res = res.replace(/\[([a-zA-Z0-9_.,=)( ]+)\]/g, function (m, n) {
-            return _this.get(n, values);
-        });
-        if (values) {
-            return res.replace(/\{([a-zA-Z0-9_.,=)( ]+)\}/g, function (m, n) {
-                return values[n] !== undefined ? values[n] : m;
-            });
-        }
-        return res;
-    };
-    return Translate;
-}());
-exports.Translate = Translate;
 
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Translate = void 0;
+
+var Translate =
+/** @class */
+function () {
+  function Translate(data) {
+    this.lang = 'en';
+
+    if (data) {
+      this.setStorage(data);
+    }
+  }
+
+  Translate.prototype.setStorage = function (data) {
+    this.data = data;
+  };
+
+  Translate.prototype.appendStorage = function (data) {
+    var _this = this;
+
+    Object.keys(data).forEach(function (key) {
+      if (_this.data[key]) {
+        _this.data[key] = __assign(__assign({}, _this.data[key]), data[key]);
+      } else {
+        _this.data[key] = data[key];
+      }
+    });
+  };
+
+  Translate.prototype.get = function (key, values) {
+    var _this = this;
+
+    if (!key) return '';
+    var path = key.split('.');
+    var v = {};
+
+    try {
+      v = path.reduce(function (a, k) {
+        return a[k];
+      }, this.data) || (path.length > 1 ? path.slice(1).reduce(function (a, k) {
+        return a[k];
+      }, this.data.common) : path.reduce(function (a, k) {
+        return a === null || a === void 0 ? void 0 : a[k];
+      }, this.data.common));
+    } catch (e) {
+      return key;
+    }
+
+    var res = (v === null || v === void 0 ? void 0 : v[this.lang]) || (v === null || v === void 0 ? void 0 : v.en) || key;
+    res = res.replace(/\[([a-zA-Z0-9_.,=)( ]+)\]/g, function (m, n) {
+      return _this.get(n, values);
+    });
+
+    if (values) {
+      return res.replace(/\{([a-zA-Z0-9_.,=)( ]+)\}/g, function (m, n) {
+        return values[n] !== undefined ? values[n] : m;
+      });
+    }
+
+    return res;
+  };
+
+  return Translate;
+}();
+
+exports.Translate = Translate;
 },{}],"../src/translations.ts":[function(require,module,exports) {
 "use strict";
 
@@ -44521,13 +44539,25 @@ LazyPromise.prototype.catch = function (onError) {
   if (this.promise === null) this.promise = new Promise(this.executor);
   return this.promise.catch(onError);
 };
-},{"./bundle-url":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../src/eth-connect.ts":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../src/interface.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+;
+},{}],"../src/main.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var _exportNames = {
+  EthWalletConnect: true
+};
 exports.EthWalletConnect = void 0;
+
+var _tslib = require("tslib");
 
 require("@material/mwc-button");
 
@@ -44549,51 +44579,25 @@ var _translations = require("./translations");
 
 var _litHtml = require("lit-html");
 
+var _interface = require("./interface");
+
+Object.keys(_interface).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+  if (key in exports && exports[key] === _interface[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _interface[key];
+    }
+  });
+});
+
 var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11, _templateObject12;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
-
-var __decorate = void 0 && (void 0).__decorate || function (decorators, target, key, desc) {
-  var c = arguments.length,
-      r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-      d;
-  if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-var __awaiter = void 0 && (void 0).__awaiter || function (thisArg, _arguments, P, generator) {
-  function adopt(value) {
-    return value instanceof P ? value : new P(function (resolve) {
-      resolve(value);
-    });
-  }
-
-  return new (P || (P = Promise))(function (resolve, reject) {
-    function fulfilled(value) {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-
-    function rejected(value) {
-      try {
-        step(generator["throw"](value));
-      } catch (e) {
-        reject(e);
-      }
-    }
-
-    function step(result) {
-      result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-    }
-
-    step((generator = generator.apply(thisArg, _arguments || [])).next());
-  });
-};
 
 const injected = 'web 3.0 injected';
 const PROVIDERS = ['privateKey', 'keystore', 'walletconnect', injected];
@@ -44601,7 +44605,7 @@ const LOCAL_STORAGE_PROVIDER_NAME = "eth_connect_provider";
 const LOCAL_STORAGE_PRIVATEKEY_NAME = "eth_connect_privatekey";
 const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
 
-const walletconnect = params => __awaiter(void 0, void 0, void 0, function* () {
+const walletconnect = params => (0, _tslib.__awaiter)(void 0, void 0, void 0, function* () {
   const walletconnect = (yield require("_bundle_loader")(require.resolve('@walletconnect/web3-provider'))).default;
   const w3provider = new walletconnect(params);
   yield w3provider.enable();
@@ -44631,7 +44635,7 @@ const walletconnect = params => __awaiter(void 0, void 0, void 0, function* () {
 let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   constructor() {
     super(...arguments);
-    this.modalContentState = '';
+    this.modalContentState = 'providers';
     this.errorContent = '';
     this.modalHeader = '';
     this.wallet = '';
@@ -44665,7 +44669,7 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
 
 
   connectInjected() {
-    return __awaiter(this, void 0, void 0, function* () {
+    return (0, _tslib.__awaiter)(this, void 0, void 0, function* () {
       const w3provider = yield (0, _detectProvider.default)();
 
       if (!w3provider) {
@@ -44713,7 +44717,7 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
     const password = this.keystorePassword.value.trim();
     const reader = new FileReader();
 
-    reader.onload = () => __awaiter(this, void 0, void 0, function* () {
+    reader.onload = () => (0, _tslib.__awaiter)(this, void 0, void 0, function* () {
       try {
         const signer = yield _ethers.ethers.Wallet.fromEncryptedJson(reader.result, password);
 
@@ -44776,14 +44780,15 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   }
 
   _onConnected(signer, providerName, key) {
-    return __awaiter(this, void 0, void 0, function* () {
+    return (0, _tslib.__awaiter)(this, void 0, void 0, function* () {
       this.saveProvider(providerName, key);
       this.provider = providerName;
+      this.wallet = yield signer.getAddress();
       if (this.modal) this.modal.open = false;
       this.dispatchEvent(new CustomEvent('connected', {
         detail: {
           signer,
-          wallet: yield signer.getAddress()
+          wallet: this.wallet
         }
       }));
     });
@@ -44807,6 +44812,7 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
     this.removeSavedData();
     this.modal.open = false;
     this.provider = '';
+    this.wallet = '';
     this.saveProvider('');
   }
 
@@ -44823,9 +44829,7 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
     delete localStorage[LOCAL_STORAGE_PRIVATEKEY_NAME];
     delete localStorage[LOCAL_STORAGE_CONNECTIONPARAMS_NAME];
   }
-  /** Events */
-
-  /** Contents */
+  /** Templates */
 
 
   privateKeyContent() {
@@ -44854,15 +44858,13 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
     return (0, _litElement.html)(_templateObject5 || (_templateObject5 = _taggedTemplateLiteral(["", "\n                ", "\n                ", ""])), this.rennderDialogProviderContent(), this.modalContentState !== "providers" ? (0, _litElement.html)(_templateObject6 || (_templateObject6 = _taggedTemplateLiteral(["<mwc-button @click=\"", "\"\n                                       slot=\"secondaryAction\">", "</mwc-button>"])), this._onBack, _translations.translate.get('button_back')) : "", this.errorContent ? (0, _litElement.html)(_templateObject7 || (_templateObject7 = _taggedTemplateLiteral(["<div class = \"error\">", "</div>"])), this.errorContent) : "");
   }
 
-  renderDisconnected() {
+  templateConnectBtn() {
     return (0, _litElement.html)(_templateObject8 || (_templateObject8 = _taggedTemplateLiteral(["<button @click = \"", "\"\n                            class = \"primary button-connect\">", "</button>"])), this.connect, _translations.translate.get("button_connect"));
   }
 
-  renderConnected() {
+  templateDisconnectBtn() {
     return (0, _litElement.html)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["<button @click = \"", "\"\n                            class = \"primary button-disconnect\">", "</button>"])), this.disconnect, _translations.translate.get("button_disconnect"));
   }
-  /** Templates */
-
 
   templateWalletIcon() {
     if (!this.provider || !_icons.SVG_IMAGES[this.provider]) {
@@ -44873,79 +44875,27 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["        \n            <div class = \"flex-row-center\">\n                ", "\n                <div>\n                    <h4 class = \"header\">", "</h4>\n                    ", "\n                </div>\n            </div>\n            <slot></slot>\n            <div class = \"flex-row-center\"\n                 style = \"margin-top: 20px;\">\n            ", "\n            </div>\n            <mwc-dialog heading = \"", "\" \n                        @closed = \"", "\">                                                        \n                ", "\n                <mwc-button dialogAction = \"close\" \n                            slot = \"secondaryAction\">", "</mwc-button>\n            </mwc-dialog>\n        "])), this.templateWalletIcon(), _translations.translate.get("wallet"), this.shortWallet, this.wallet ? this.renderConnected() : this.renderDisconnected(), this.modalHeader, this._onClose, this.rennderDialogProvider(), _translations.translate.get('button_close'));
+    return (0, _litElement.html)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["        \n            <div class = \"flex-row-center\">\n                ", "\n                <div>\n                    <h4 class = \"header\">", "</h4>\n                    ", "\n                </div>\n            </div>\n            <slot></slot>\n            <div class = \"flex-row-center\"\n                 style = \"margin-top: 20px;\">\n            ", "\n            </div>\n            <mwc-dialog heading = \"", "\" \n                        @closed = \"", "\">                                                        \n                ", "\n                <mwc-button dialogAction = \"close\" \n                            slot = \"secondaryAction\">", "</mwc-button>\n            </mwc-dialog>\n        "])), this.templateWalletIcon(), _translations.translate.get("wallet"), this.shortWallet, this.wallet ? this.templateDisconnectBtn() : this.templateConnectBtn(), this.modalHeader, this._onClose, this.rennderDialogProvider(), _translations.translate.get('button_close'));
   }
 
 };
 exports.EthWalletConnect = EthWalletConnect;
 EthWalletConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n        :host{\n            font-family: var(--body-font, Helvetica, Arial, sans-serif);\n            display: block;\n        }\n        .flex-row{\n            display: flex;\n        }\n        .flex-row-center{\n            display: flex;\n            align-items: center;\n        }\n        .header{\n            margin: 0;\n            font-size: 18px;\n        }        \n        .wallet-icon{\n            border-radius: 20px;\n            width: 45px;\n            height: 45px;\n            margin-right: 10px;\n        }\n        .wallet-icon svg{\n            width: 100%;\n            height: 100%;\n        }\n\n        .attention {\n            margin-top: 0;\n            color: #ba0000;\n            font-size: 1.1.rem;\n        }\n        .wallet{\n            display: flex;\n            align-items: center;\n            color: var(--app-text-color);\n            font-size: 12px;\n            border-radius: 20px;\n            text-align: center;\n            padding: 0 5px;\n        }\n        .wallte-short{\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        .error {\n            margin-top: 10px;\n            padding: 5px 10px;\n            font-size: 14px;\n            background-color: #d70404;\n            text-align: center;\n            color: #fff;\n            word-break: break-all;\n        }\n\n        .provider-card-wrapper {\n            flex: 1 0 25%;\n            min-width: 120px;\n            background: none;\n            outline: none;\n            border: none;\n            padding: 2px;\n        }\n\n        .provider-card {\n            cursor: pointer;\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: space-between;\n            align-items: center;\n            height: 120px;\n            border-radius: 2px;\n            border: 1px solid hsl(340, 20%, 90%);\n        }\n\n        .provider-card:hover {\n            border: 1px solid hsl(340, 90%, 70%);\n        }\n        .provider-card .title{\n            margin-top: 15px;\n        }\n\n        .wrapper {\n            display: flex;\n            flex-wrap: wrap;\n        }"])))];
-
-__decorate([(0, _litElement.property)({
+(0, _tslib.__decorate)([(0, _litElement.property)({
   type: Object,
   attribute: false
 })], EthWalletConnect.prototype, "connectionConfig", void 0);
-
-__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "modalContentState", void 0);
-
-__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "errorContent", void 0);
-
-__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "modalHeader", void 0);
-
-__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "wallet", void 0);
-
-__decorate([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "provider", void 0);
-
-__decorate([(0, _litElement.query)('mwc-dialog')], EthWalletConnect.prototype, "modal", void 0);
-
-__decorate([(0, _litElement.query)('#keystore-file')], EthWalletConnect.prototype, "keystoreFile", void 0);
-
-__decorate([(0, _litElement.query)('#keystore-password')], EthWalletConnect.prototype, "keystorePassword", void 0);
-
-__decorate([(0, _litElement.query)('#privatekey-input')], EthWalletConnect.prototype, "privateKeyInput", void 0);
-
-exports.EthWalletConnect = EthWalletConnect = __decorate([(0, _litElement.customElement)('eth-wallet-connect')], EthWalletConnect);
-/*
-*/
-},{"@material/mwc-button":"../node_modules/@material/mwc-button/mwc-button.js","@material/mwc-dialog":"../node_modules/@material/mwc-dialog/mwc-dialog.js","@material/mwc-textfield":"../node_modules/@material/mwc-textfield/mwc-textfield.js","ethers":"../node_modules/ethers/lib.esm/index.js","./icons":"../src/icons.ts","@metamask/detect-provider":"../node_modules/@metamask/detect-provider/dist/index.js","lit-element":"../node_modules/lit-element/lit-element.js","lit-html/directives/unsafe-svg":"../node_modules/lit-html/directives/unsafe-svg.js","./translations":"../src/translations.ts","lit-html":"../node_modules/lit-html/lit-html.js","_bundle_loader":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js","@walletconnect/web3-provider":[["cjs.23f241cb.js","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"cjs.23f241cb.js.map","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"]}],"../src/interface.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-;
-},{}],"../src/main.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _ethConnect = require("./eth-connect");
-
-Object.keys(_ethConnect).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _ethConnect[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _ethConnect[key];
-    }
-  });
-});
-
-var _interface = require("./interface");
-
-Object.keys(_interface).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _interface[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _interface[key];
-    }
-  });
-});
-},{"./eth-connect":"../src/eth-connect.ts","./interface":"../src/interface.ts"}],"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _tslib.__decorate)([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "modalContentState", void 0);
+(0, _tslib.__decorate)([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "errorContent", void 0);
+(0, _tslib.__decorate)([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "modalHeader", void 0);
+(0, _tslib.__decorate)([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "wallet", void 0);
+(0, _tslib.__decorate)([(0, _litElement.internalProperty)()], EthWalletConnect.prototype, "provider", void 0);
+(0, _tslib.__decorate)([(0, _litElement.query)('mwc-dialog')], EthWalletConnect.prototype, "modal", void 0);
+(0, _tslib.__decorate)([(0, _litElement.query)('#keystore-file')], EthWalletConnect.prototype, "keystoreFile", void 0);
+(0, _tslib.__decorate)([(0, _litElement.query)('#keystore-password')], EthWalletConnect.prototype, "keystorePassword", void 0);
+(0, _tslib.__decorate)([(0, _litElement.query)('#privatekey-input')], EthWalletConnect.prototype, "privateKeyInput", void 0);
+exports.EthWalletConnect = EthWalletConnect = (0, _tslib.__decorate)([(0, _litElement.customElement)('eth-wallet-connect')], EthWalletConnect);
+},{"tslib":"../node_modules/tslib/tslib.es6.js","@material/mwc-button":"../node_modules/@material/mwc-button/mwc-button.js","@material/mwc-dialog":"../node_modules/@material/mwc-dialog/mwc-dialog.js","@material/mwc-textfield":"../node_modules/@material/mwc-textfield/mwc-textfield.js","ethers":"../node_modules/ethers/lib.esm/index.js","./icons":"../src/icons.ts","@metamask/detect-provider":"../node_modules/@metamask/detect-provider/dist/index.js","lit-element":"../node_modules/lit-element/lit-element.js","lit-html/directives/unsafe-svg":"../node_modules/lit-html/directives/unsafe-svg.js","./translations":"../src/translations.ts","lit-html":"../node_modules/lit-html/lit-html.js","_bundle_loader":"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-loader.js","@walletconnect/web3-provider":[["cjs.23f241cb.js","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"cjs.23f241cb.js.map","../node_modules/@walletconnect/web3-provider/dist/cjs/index.js"],"./interface":"../src/interface.ts"}],"C:/Users/Kaifat/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -44973,7 +44923,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55777" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61999" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

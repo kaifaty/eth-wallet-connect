@@ -1,14 +1,18 @@
 {
   "name": "eth-wallet-connect",
-  "version": "1.0.4",
+  "version": "1.0.10",
   "description": "",
-  "main": "src/main.ts",
+  "main": "dist/main.js",
+  "module": "dist/main.js",
+  "typings": "dist/main.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel demo/index.html -d demo/dist "
+    "dev": "parcel demo/index.html -d demo/dist",
+    "tsc": "tsc"
   },
   "files": [
     "/src/",
+    "/dist/",
     "/demo/"
   ],
   "homepage": "https://github.com/kaifaty/eth-wallet-connect#readme",
@@ -19,7 +23,7 @@
   "author": "kaifaty",
   "license": "MIT",
   "browserslist": [
-    "since 2017-06"
+    "since 2018-06"
   ],
   "dependencies": {
     "@material/mwc-button": "^0.20.0",
