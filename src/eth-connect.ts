@@ -53,7 +53,14 @@ export class EthWalletConnect extends LitElement{
     static styles = [css `
         :host{
             font-family: var(--body-font, Helvetica, Arial, sans-serif);
-            right: 20px;
+            display: block;
+        }
+        .flex-row{
+            display: flex;
+        }
+        .flex-row-center{
+            display: flex;
+            align-items: center;
         }
         .header{
             margin: 0;
@@ -401,7 +408,7 @@ export class EthWalletConnect extends LitElement{
     }
     render(){        
         return html`        
-            <div class = "flex-row">
+            <div class = "flex-row-center">
                 ${this.templateWalletIcon()}
                 <div>
                     <h4 class = "header">${translate.get("wallet")}</h4>

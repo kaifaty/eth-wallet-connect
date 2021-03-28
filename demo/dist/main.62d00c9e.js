@@ -44873,12 +44873,12 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   }
 
   render() {
-    return (0, _litElement.html)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["        \n            <div class = \"flex-row\">\n                ", "\n                <div>\n                    <h4 class = \"header\">", "</h4>\n                    ", "\n                </div>\n            </div>\n            <slot></slot>\n            <div class = \"flex-row-center\"\n                 style = \"margin-top: 20px;\">\n            ", "\n            </div>\n            <mwc-dialog heading = \"", "\" \n                        @closed = \"", "\">                                                        \n                ", "\n                <mwc-button dialogAction = \"close\" \n                            slot = \"secondaryAction\">", "</mwc-button>\n            </mwc-dialog>\n        "])), this.templateWalletIcon(), _translations.translate.get("wallet"), this.shortWallet, this.wallet ? this.renderConnected() : this.renderDisconnected(), this.modalHeader, this._onClose, this.rennderDialogProvider(), _translations.translate.get('button_close'));
+    return (0, _litElement.html)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["        \n            <div class = \"flex-row-center\">\n                ", "\n                <div>\n                    <h4 class = \"header\">", "</h4>\n                    ", "\n                </div>\n            </div>\n            <slot></slot>\n            <div class = \"flex-row-center\"\n                 style = \"margin-top: 20px;\">\n            ", "\n            </div>\n            <mwc-dialog heading = \"", "\" \n                        @closed = \"", "\">                                                        \n                ", "\n                <mwc-button dialogAction = \"close\" \n                            slot = \"secondaryAction\">", "</mwc-button>\n            </mwc-dialog>\n        "])), this.templateWalletIcon(), _translations.translate.get("wallet"), this.shortWallet, this.wallet ? this.renderConnected() : this.renderDisconnected(), this.modalHeader, this._onClose, this.rennderDialogProvider(), _translations.translate.get('button_close'));
   }
 
 };
 exports.EthWalletConnect = EthWalletConnect;
-EthWalletConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n        :host{\n            font-family: var(--body-font, Helvetica, Arial, sans-serif);\n            right: 20px;\n        }\n        .header{\n            margin: 0;\n            font-size: 18px;\n        }        \n        .wallet-icon{\n            border-radius: 20px;\n            width: 45px;\n            height: 45px;\n            margin-right: 10px;\n        }\n        .wallet-icon svg{\n            width: 100%;\n            height: 100%;\n        }\n\n        .attention {\n            margin-top: 0;\n            color: #ba0000;\n            font-size: 1.1.rem;\n        }\n        .wallet{\n            display: flex;\n            align-items: center;\n            color: var(--app-text-color);\n            font-size: 12px;\n            border-radius: 20px;\n            text-align: center;\n            padding: 0 5px;\n        }\n        .wallte-short{\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        .error {\n            margin-top: 10px;\n            padding: 5px 10px;\n            font-size: 14px;\n            background-color: #d70404;\n            text-align: center;\n            color: #fff;\n            word-break: break-all;\n        }\n\n        .provider-card-wrapper {\n            flex: 1 0 25%;\n            min-width: 120px;\n            background: none;\n            outline: none;\n            border: none;\n            padding: 2px;\n        }\n\n        .provider-card {\n            cursor: pointer;\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: space-between;\n            align-items: center;\n            height: 120px;\n            border-radius: 2px;\n            border: 1px solid hsl(340, 20%, 90%);\n        }\n\n        .provider-card:hover {\n            border: 1px solid hsl(340, 90%, 70%);\n        }\n        .provider-card .title{\n            margin-top: 15px;\n        }\n\n        .wrapper {\n            display: flex;\n            flex-wrap: wrap;\n        }"])))];
+EthWalletConnect.styles = [(0, _litElement.css)(_templateObject12 || (_templateObject12 = _taggedTemplateLiteral(["\n        :host{\n            font-family: var(--body-font, Helvetica, Arial, sans-serif);\n            display: block;\n        }\n        .flex-row{\n            display: flex;\n        }\n        .flex-row-center{\n            display: flex;\n            align-items: center;\n        }\n        .header{\n            margin: 0;\n            font-size: 18px;\n        }        \n        .wallet-icon{\n            border-radius: 20px;\n            width: 45px;\n            height: 45px;\n            margin-right: 10px;\n        }\n        .wallet-icon svg{\n            width: 100%;\n            height: 100%;\n        }\n\n        .attention {\n            margin-top: 0;\n            color: #ba0000;\n            font-size: 1.1.rem;\n        }\n        .wallet{\n            display: flex;\n            align-items: center;\n            color: var(--app-text-color);\n            font-size: 12px;\n            border-radius: 20px;\n            text-align: center;\n            padding: 0 5px;\n        }\n        .wallte-short{\n            display: flex;\n            justify-content: center;\n            width: 100%;\n        }\n\n        .error {\n            margin-top: 10px;\n            padding: 5px 10px;\n            font-size: 14px;\n            background-color: #d70404;\n            text-align: center;\n            color: #fff;\n            word-break: break-all;\n        }\n\n        .provider-card-wrapper {\n            flex: 1 0 25%;\n            min-width: 120px;\n            background: none;\n            outline: none;\n            border: none;\n            padding: 2px;\n        }\n\n        .provider-card {\n            cursor: pointer;\n            padding: 20px;\n            display: flex;\n            flex-direction: column;\n            justify-content: space-between;\n            align-items: center;\n            height: 120px;\n            border-radius: 2px;\n            border: 1px solid hsl(340, 20%, 90%);\n        }\n\n        .provider-card:hover {\n            border: 1px solid hsl(340, 90%, 70%);\n        }\n        .provider-card .title{\n            margin-top: 15px;\n        }\n\n        .wrapper {\n            display: flex;\n            flex-wrap: wrap;\n        }"])))];
 
 __decorate([(0, _litElement.property)({
   type: Object,
@@ -44920,7 +44920,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-require("./eth-connect");
+var _ethConnect = require("./eth-connect");
+
+Object.keys(_ethConnect).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _ethConnect[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _ethConnect[key];
+    }
+  });
+});
 
 var _interface = require("./interface");
 
@@ -44962,7 +44973,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54684" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55777" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
