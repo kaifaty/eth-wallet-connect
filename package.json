@@ -1,0 +1,23 @@
+{
+  "name": "eth-wallet-connect",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material/mwc-button": "^0.20.0",
+    "@material/mwc-dialog": "^0.20.0",
+    "@material/mwc-textfield": "^0.20.0",
+    "@metamask/detect-provider": "^1.2.0",
+    "@walletconnect/web3-provider": "^1.4.0",
+    "ethers": "^5.0.32",
+    "lit-element": "^2.4.0",
+    "lit-store": "^1.0.5",
+    "simple-translations": "^1.0.2"
+  }
+}
