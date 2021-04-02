@@ -26,6 +26,7 @@ import { INetworkParams } from './interface';
 export declare class EthWalletConnect extends LitElement implements IEthWalletConnect {
     static styles: import("lit-element").CSSResult;
     connectionConfig: INetworkParams;
+    lang: string;
     modalContentState: string;
     errorContent: string;
     modalHeader: string;
@@ -36,7 +37,6 @@ export declare class EthWalletConnect extends LitElement implements IEthWalletCo
             type: StringConstructor;
         };
     };
-    set lang(value: string);
     modal: Dialog;
     keystoreFile: HTMLInputElement;
     keystorePassword: HTMLInputElement;

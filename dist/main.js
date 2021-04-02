@@ -43,6 +43,7 @@ const walletconnect = async (params) => {
 let EthWalletConnect = class EthWalletConnect extends LitElement {
     constructor() {
         super(...arguments);
+        this.lang = 'en';
         this.modalContentState = 'providers';
         this.errorContent = '';
         this.modalHeader = '';
@@ -54,10 +55,6 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
         return {
             lang: { type: String }
         };
-    }
-    set lang(value) {
-        translate.lang = value;
-        this.requestUpdate();
     }
     get shortWallet() {
         return this.wallet.length > 16
@@ -148,7 +145,7 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
                 this.connectPrivateKey(localStorage.getItem(LOCAL_STORAGE_PRIVATEKEY_NAME));
                 return;
             }
-            this.modalHeader = translate.get(pr);
+            this.modalHeader = translate.get(pr, this.lang);
             this.modalContentState = pr;
         }
     }
@@ -205,17 +202,17 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
     }
     /** Templates */
     templatePrivateKey() {
-        return html `<h5 class="attention">${translate.get("privateKeyAttention")}</h5>
+        return html `<h5 class="attention">${translate.get("privateKeyAttention", this.lang)}</h5>
         <mwc-textfield id = "privatekey-input" 
                        required
-                       label="${translate.get("privateKey")}">
+                       label="${translate.get("privateKey", this.lang)}">
         </mwc-textfield>
         <mwc-button @click = "${this._onconnectPrivateKey}" 
                     slot = "primaryAction" 
-                    raised >${translate.get("button_connect")}</mwc-button>`;
+                    raised >${translate.get("button_connect", this.lang)}</mwc-button>`;
     }
     templateKeystore() {
-        return html `<h5 class = "attention">${translate.get("privateKeyAttention")}</h5>
+        return html `<h5 class = "attention">${translate.get("privateKeyAttention", this.lang)}</h5>
                 <input id = "keystore-file"
                        type = "file"
                        @change = "${this._onFileChange}"
@@ -224,18 +221,18 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
                 <div style="display: flex; align-items: center; justify-content: space-between">
                     <mwc-button @click = "${() => this.keystoreFile.click()}"
                                 raised
-                                label = "${translate.get("choseFile")}"></mwc-button>
+                                label = "${translate.get("choseFile", this.lang)}"></mwc-button>
                     <mwc-textfield required
                                    password
                                    id = "keystore-password"
-                                   label = "${translate.get("password")}"></mwc-textfield>
+                                   label = "${translate.get("password", this.lang)}"></mwc-textfield>
                 </div>
                 <div>
                     <small class = "file-chosen" style="word-break: break-all;"></small>
                 </div>
             <mwc-button @click = "${this.connectKeyStore}"
                         slot = "primaryAction"
-                        raised >${translate.get("button_connect")}</mwc-button>`;
+                        raised >${translate.get("button_connect", this.lang)}</mwc-button>`;
     }
     templateSelectProvider() {
         return html `<div class = "wrapper">${PROVIDERS.map(it => html `<button type="submit"
@@ -263,7 +260,7 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
         return html `${this.templateProviderContent()}
                 ${this.modalContentState !== "providers"
             ? html `<mwc-button @click="${this._onBack}"
-                                       slot="secondaryAction">${translate.get('button_back')}</mwc-button>`
+                                       slot="secondaryAction">${translate.get('button_back', this.lang)}</mwc-button>`
             : ""}
                 ${this.errorContent
             ? html `<div class = "error">${this.errorContent}</div>`
@@ -271,11 +268,11 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
     }
     templateConnectBtn() {
         return html `<button @click = "${this.connect}"
-                            class = "primary button-connect">${translate.get("button_connect")}</button>`;
+                            class = "primary button-connect">${translate.get("button_connect", this.lang)}</button>`;
     }
     templateDisconnectBtn() {
         return html `<button @click = "${this.disconnect}"
-                            class = "primary button-disconnect">${translate.get("button_disconnect")}</button>`;
+                            class = "primary button-disconnect">${translate.get("button_disconnect", this.lang)}</button>`;
     }
     templateWalletIcon() {
         if (!this.provider || !SVG_IMAGES[this.provider]) {
@@ -291,7 +288,7 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
             <div class = "flex-row-center">
                 ${this.templateWalletIcon()}
                 <div>
-                    <h4 class = "header">${translate.get("wallet")}</h4>
+                    <h4 class = "header">${translate.get("wallet", this.lang)}</h4>
                     ${this.shortWallet}
                 </div>
             </div>
@@ -306,7 +303,7 @@ let EthWalletConnect = class EthWalletConnect extends LitElement {
                         @closed = "${this._onClose}">                                                        
                 ${this.templateDialogProvider()}
                 <mwc-button dialogAction = "close" 
-                            slot = "secondaryAction">${translate.get('button_close')}</mwc-button>
+                            slot = "secondaryAction">${translate.get('button_close', this.lang)}</mwc-button>
             </mwc-dialog>
         `;
     }
@@ -315,6 +312,9 @@ EthWalletConnect.styles = STYLES;
 __decorate([
     property({ type: Object, attribute: false })
 ], EthWalletConnect.prototype, "connectionConfig", void 0);
+__decorate([
+    property({ type: String, attribute: false })
+], EthWalletConnect.prototype, "lang", void 0);
 __decorate([
     internalProperty()
 ], EthWalletConnect.prototype, "modalContentState", void 0);
