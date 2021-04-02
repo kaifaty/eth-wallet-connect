@@ -44623,13 +44623,13 @@ const LOCAL_STORAGE_PROVIDER_NAME = "eth_connect_provider";
 const LOCAL_STORAGE_PRIVATEKEY_NAME = "eth_connect_privatekey";
 const LOCAL_STORAGE_CONNECTIONPARAMS_NAME = "eth_connect_connectionparams";
 
-const walletconnect = params => (0, _tslib.__awaiter)(void 0, void 0, void 0, function* () {
-  const walletconnect = (yield require("_bundle_loader")(require.resolve('@walletconnect/web3-provider'))).default;
+const walletconnect = async params => {
+  const walletconnect = (await require("_bundle_loader")(require.resolve('@walletconnect/web3-provider'))).default;
   const w3provider = new walletconnect(params);
-  yield w3provider.enable();
+  await w3provider.enable();
   const provider = new _ethers.ethers.providers.Web3Provider(w3provider);
   return provider.getSigner();
-});
+};
 /** Events
  * @signerUpdate
  *      Signer
@@ -44686,38 +44686,36 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
   /** Signers */
 
 
-  connectInjected() {
-    return (0, _tslib.__awaiter)(this, void 0, void 0, function* () {
-      const w3provider = yield (0, _detectProvider.default)();
+  async connectInjected() {
+    const w3provider = await (0, _detectProvider.default)();
 
-      if (!w3provider) {
-        throw new Error("No injected wallet");
-      }
+    if (!w3provider) {
+      throw new Error("No injected wallet");
+    }
 
-      yield w3provider.enable();
+    await w3provider.enable();
 
-      if (!this.networkChangedEventInited) {
-        w3provider.on("networkChanged", e => {
-          this.dispatchEvent(new CustomEvent("signerUpdate", {
-            detail: new _ethers.ethers.providers.Web3Provider(w3provider).getSigner(),
-            composed: true,
-            bubbles: true
-          }));
-          this.dispatchEvent(new CustomEvent("changeNetwork", {
-            detail: {
-              network: this.connectionConfig.chainIds[e],
-              informRequired: false
-            },
-            composed: true,
-            bubbles: true
-          }));
-        });
-        this.networkChangedEventInited = true;
-      }
+    if (!this.networkChangedEventInited) {
+      w3provider.on("networkChanged", e => {
+        this.dispatchEvent(new CustomEvent("signerUpdate", {
+          detail: new _ethers.ethers.providers.Web3Provider(w3provider).getSigner(),
+          composed: true,
+          bubbles: true
+        }));
+        this.dispatchEvent(new CustomEvent("changeNetwork", {
+          detail: {
+            network: this.connectionConfig.chainIds[e],
+            informRequired: false
+          },
+          composed: true,
+          bubbles: true
+        }));
+      });
+      this.networkChangedEventInited = true;
+    }
 
-      const provider = new _ethers.ethers.providers.Web3Provider(w3provider);
-      return provider.getSigner();
-    });
+    const provider = new _ethers.ethers.providers.Web3Provider(w3provider);
+    return provider.getSigner();
   }
 
   connectPrivateKey(key) {
@@ -44735,15 +44733,15 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
     const password = this.keystorePassword.value.trim();
     const reader = new FileReader();
 
-    reader.onload = () => (0, _tslib.__awaiter)(this, void 0, void 0, function* () {
+    reader.onload = async () => {
       try {
-        const signer = yield _ethers.ethers.Wallet.fromEncryptedJson(reader.result, password);
+        const signer = await _ethers.ethers.Wallet.fromEncryptedJson(reader.result, password);
 
         this._onConnected(signer, 'privateKey', signer.privateKey);
       } catch (e) {
         this.errorContent = e.message;
       }
-    });
+    };
 
     reader.readAsText(file_el.files[0], "UTF-8");
   }
@@ -44797,19 +44795,17 @@ let EthWalletConnect = class EthWalletConnect extends _litElement.LitElement {
     el.textContent = (_a = e.target) === null || _a === void 0 ? void 0 : _a.value;
   }
 
-  _onConnected(signer, providerName, key) {
-    return (0, _tslib.__awaiter)(this, void 0, void 0, function* () {
-      this.saveProvider(providerName, key);
-      this.provider = providerName;
-      this.wallet = yield signer.getAddress();
-      if (this.modal) this.modal.open = false;
-      this.dispatchEvent(new CustomEvent('connected', {
-        detail: {
-          signer,
-          wallet: this.wallet
-        }
-      }));
-    });
+  async _onConnected(signer, providerName, key) {
+    this.saveProvider(providerName, key);
+    this.provider = providerName;
+    this.wallet = await signer.getAddress();
+    if (this.modal) this.modal.open = false;
+    this.dispatchEvent(new CustomEvent('connected', {
+      detail: {
+        signer,
+        wallet: this.wallet
+      }
+    }));
   }
 
   _onconnectPrivateKey(e) {
@@ -44941,7 +44937,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49698" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54182" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

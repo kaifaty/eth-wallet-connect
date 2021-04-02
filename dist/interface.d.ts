@@ -34,3 +34,7 @@ export interface INetworkItemParams {
     "name": string;
     "chainId": number;
 }
+export interface IEthWalletConnect {
+    connect(): void;
+    lang: string;
+}

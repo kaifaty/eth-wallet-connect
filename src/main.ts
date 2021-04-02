@@ -8,7 +8,7 @@ import {LitElement, html, css, property, customElement, query, internalProperty}
 import { unsafeSVG } from 'lit-html/directives/unsafe-svg';
 import { translate } from "./translations"
 import { Dialog } from "@material/mwc-dialog";
-import { TWalletConnectParams } from './interface'
+import { TWalletConnectParams, IEthWalletConnect } from './interface';
 import { INetworkParams } from './interface';
 import { nothing } from 'lit-html';
 import { STYLES } from "./styles";
@@ -47,8 +47,10 @@ const walletconnect = async (params: TWalletConnectParams): Promise<any> => {
  *      
  */
 
+
+
 @customElement('eth-wallet-connect')
-export class EthWalletConnect extends LitElement{    
+export class EthWalletConnect extends LitElement implements IEthWalletConnect{    
     static styles = STYLES;
     @property({type: Object, attribute: false}) connectionConfig: INetworkParams;
     @internalProperty() modalContentState: string = 'providers';

@@ -19,7 +19,6 @@ export interface INetworkParams {
         },
     },
 };
-
 export type TNetworks  = {
     "mainnet": INetworkItemParams
     [key: string]: INetworkItemParams
@@ -32,4 +31,8 @@ export interface INetworkItemParams{
     "explorer": string
     "name": string
     "chainId": number
+}
+export interface IEthWalletConnect{
+    connect(): void
+    lang: string
 }

@@ -3,6 +3,7 @@ import "@material/mwc-dialog";
 import "@material/mwc-textfield";
 import { LitElement } from "lit-element";
 import { Dialog } from "@material/mwc-dialog";
+import { IEthWalletConnect } from './interface';
 import { INetworkParams } from './interface';
 /** Events
  * @signerUpdate
@@ -22,8 +23,8 @@ import { INetworkParams } from './interface';
  * @disconnected
  *
  */
-export declare class EthWalletConnect extends LitElement {
-    static styles: import("lit-element").CSSResult[];
+export declare class EthWalletConnect extends LitElement implements IEthWalletConnect {
+    static styles: import("lit-element").CSSResult;
     connectionConfig: INetworkParams;
     modalContentState: string;
     errorContent: string;
@@ -59,17 +60,20 @@ export declare class EthWalletConnect extends LitElement {
     disconnect(): void;
     private saveProvider;
     removeSavedData(): void;
-    /** Events */
-    /** Contents */
-    private privateKeyContent;
-    private keystoreContent;
-    private providerSelectContent;
-    private rennderDialogProviderContent;
-    private rennderDialogProvider;
-    private renderDisconnected;
-    private renderConnected;
     /** Templates */
+    private templatePrivateKey;
+    private templateKeystore;
+    private templateSelectProvider;
+    private templateProviderContent;
+    private templateDialogProvider;
+    private templateConnectBtn;
+    private templateDisconnectBtn;
     templateWalletIcon(): {};
     render(): import("lit-element").TemplateResult;
+}
+declare global {
+    interface HTMLElementTagNameMap {
+        'eth-wallet-connect': EthWalletConnect;
+    }
 }
 export * from './interface';
