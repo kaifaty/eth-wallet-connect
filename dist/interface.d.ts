@@ -33,8 +33,15 @@ export interface INetworkItemParams {
     "explorer": string;
     "name": string;
     "chainId": number;
+    availableTokens: TToken[];
 }
 export interface IEthWalletConnect {
     connect(): void;
     lang: string;
 }
+export declare type TToken = {
+    "address": string;
+    "decimal": number;
+    "symbol": string;
+    "name": string;
+};
